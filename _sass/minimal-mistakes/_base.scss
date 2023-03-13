@@ -131,13 +131,9 @@ a {
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: #ff9595;
   }
 
-  &:hover {
-    color: $link-color-hover;
-    outline: 0;
-  }
 }
 
 /* buttons */

@@ -27,8 +27,8 @@ repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-m
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+breadcrumbs              :  true #, false (default)
+words_per_minute         : # 200
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -83,7 +83,7 @@ baidu_site_verification  :
 #twitter:
   #username               :
 facebook:
-  username               : mfgaede
+  username               : 
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -106,28 +106,25 @@ analytics:
 author:
   name             : "franny gaede"
   avatar           : /assets/img/profile2023.JPG # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "she / her. librarian, technologist, gardener, calligrapher."
   location         : "eugene, or"
-  email            : "mfgaede@gmail.com"
+  #email            : "mfgaede@gmail.com"
   links:
-    - label: "Email"
+    - label: "email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:mfgaede@gmail.com"
-    - label: "Website"
+    - label: "website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
+      url: "https://mfgaede.com"
+    - label: "mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://hcommons.social/@librarifran"
+    - label: "facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
+      url: "https://www.facebook.com/mfgaede"
+    - label: "github"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/mfgaede"
 
 # Site Footer
 footer:
@@ -169,7 +166,6 @@ exclude:
   - assets/js/vendor
   - Capfile
   - CHANGELOG
-  - config
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
@@ -181,8 +177,8 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+#  - /docs # ignore Minimal Mistakes /docs
+#  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -231,14 +227,15 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-liquify
 
 # mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
+#whitelist:
+#  - jekyll-paginate
+#  - jekyll-sitemap
+#  - jekyll-gist
+#  - jekyll-feed
+#  - jekyll-include-cache
 
 
 # Archives
@@ -251,24 +248,22 @@ whitelist:
 #  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
-#category_archive:
-#  type: liquid
-#  path: /categories/
-#tag_archive:
-#  type: liquid
-#  path: /tags/
-# https://github.com/jekyll/jekyll-archives
- jekyll-archives:
-   enabled:
-     - categories
-     - tags
-   layouts:
-     category: archive-taxonomy
-     tag: archive-taxonomy
-   permalinks:
-     category: /categories/:name/
-     tag: /tags/:name/
-
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 # HTML Compression
 # - https://jch.penibelst.de/
@@ -287,7 +282,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: # true
       comments: # true
       share: true
       related: true
+    sidebar:
+      nav: "categoryposts"

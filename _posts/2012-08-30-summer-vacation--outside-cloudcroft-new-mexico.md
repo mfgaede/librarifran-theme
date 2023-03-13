@@ -2,24 +2,14 @@
 title: "summer vacation - outside cloudcroft, nm"
 date: 2012-08-30 08:00:00 +0000
 categories: [photos]
+gallery: 
+   - url: /assets/img/632990c200.jpg
+     image_path: /assets/img/thumbs/632990c200.png
+   - url: /assets/img/b2e77d4492.jpg
+     image_path: /assets/img/thumbs/b2e77d4492.png
+   - url: /assets/img/cc53191f54.jpg
+     image_path: /assets/img/thumbs/cc53191f54.png
+   - url: /assets/img/456d9cbd52.jpg
+     image_path: /assets/img/thumbs/456d9cbd52.png
 ---
-<div class="gallery">
-   <div class="gallery__column">
-      <figure class="gallery__thumb">
-   <img src="/assets/img/632990c200.jpg" class="gallery__image">
-</figure>
-   <figure class="gallery__thumb">
-   <img src="/assets/img/b2e77d4492.jpg" class="gallery__image">
-</figure>
-</div>
-   <div class="gallery__column">
-      <figure class="gallery__thumb">
-   <img src="/assets/img/cc53191f54.jpg" class="gallery__image">
-</figure>
-</div>
-   <div class="gallery__column">
-      <figure class="gallery__thumb">
-   <img src="/assets/img/456d9cbd52.jpg" class="gallery__image">
-</figure>
-</div>
-</div>
+{% include gallery id="gallery" class="full" %}

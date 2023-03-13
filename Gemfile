@@ -29,3 +29,4 @@ group :jekyll_plugins do
   gem "jekyll-data"
   gem 'jekyll-archives'
 end
+gem "jekyll-liquify", "~> 0.0.2"
