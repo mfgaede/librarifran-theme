@@ -1,6 +1,20 @@
 ---
-layout: home
+layout: single
 author_profile: true
 sidebar:
  nav: "categoryposts"
+header:
+  overlay_image: assets/img/florencia_banner.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [Florencia Viadana via Unsplash](https://unsplash.com/photos/jReenm8gCXs)"
+classes: wide
 ---
+
+<h3>recent posts</h3>
+<div>
+  <div class="grid__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
+</div>
