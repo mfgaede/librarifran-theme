@@ -51,3 +51,7 @@ gallery:
      image_path: /assets/img/thumbs/308008538_10158488295911261_8446959219142248583_n_10158488295916261.png
 ---
 {% include gallery id="gallery" class="full" %}
+
+<video muted autoplay controls>
+    <source src="/assets/video/275815853_1024969871563011_6245759549585905481_n_2112619588917114.mp4" type="video/mp4">
+</video>

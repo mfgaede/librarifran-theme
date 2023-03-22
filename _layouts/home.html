@@ -11,7 +11,7 @@ sidebar:
 
   {% assign posts = paginator.posts %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% assign entries_layout = grid | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
     {% include archive-single.html type=entries_layout %}

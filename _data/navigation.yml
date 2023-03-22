@@ -1,17 +1,17 @@
 main:
 - title: "blog"
-  url: /blog/
+  url: /year-archive/
 #sidebar
 categoryposts:
   - title: blog
     children:
      - title: "photos"
-       url: /categories/photos
+       url: /categories/#photos
      - title: "links"
-       url: /categories/links
+       url: /categories/#links
      - title: "music"
-       url: /categories/music
+       url: /categories/#music
      - title: "videos"
-       url: /categories/videos
-     - title: "by year"
-       url: /year-archive
+       url: /categories/#videos
+     - title: "art"
+       url: /categories/#art

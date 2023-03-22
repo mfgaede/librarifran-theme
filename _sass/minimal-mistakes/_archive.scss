@@ -35,7 +35,7 @@
   margin: 1.414em 0 0.5em;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
-  color: #fff;
+  color: #ede9ee;
   border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {
@@ -101,7 +101,7 @@
   right: 0;
   margin: 0 auto;
   padding: 2px 5px;
-  color: #fff;
+  color: #ede9ee;
   font-family: $caption-font-family;
   font-size: $type-size-8;
   background: #000;
@@ -115,7 +115,7 @@
   }
 
   a {
-    color: #fff;
+    color: #ede9ee;
     text-decoration: none;
   }
 }
@@ -166,7 +166,7 @@
       margin-left: 0;
     }
 
-    &:nth-child(2n + 2) {
+    &:nth-child(2n + 1) {
       clear: none;
       margin-left: gutter(of 10);
     }
@@ -185,17 +185,17 @@
       clear: both;
     }
 
-    &:nth-child(4n + 2) {
+    &:nth-child(4n + 1) {
       clear: none;
       margin-left: gutter(1 of 12);
     }
 
-    &:nth-child(4n + 3) {
+    &:nth-child(4n + 1) {
       clear: none;
       margin-left: gutter(1 of 12);
     }
 
-    &:nth-child(4n + 4) {
+    &:nth-child(4n + 1) {
       clear: none;
       margin-left: gutter(1 of 12);
     }
