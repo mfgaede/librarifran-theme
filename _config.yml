@@ -5,7 +5,7 @@ title                    : "what's the worst that could happen"
 title_separator          : "-"
 subtitle                 : experiments in diy infrastructure
 name                     : "franny gaede"
-url                      : #base hostname
+url                      : https://librarifran.com
 repository               : "mfgaede/librarifran-theme"
 teaser                   : #path of fallback teaser
 logo                     : #path of logo for masthead
