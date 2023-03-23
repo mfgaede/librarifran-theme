@@ -1,6 +1,4 @@
-/* ==========================================================================
-   MIXINS
-   ========================================================================== */
+/* mixins */
 
 @use "sass:math";
 
@@ -12,37 +10,10 @@
   outline-offset: -2px;
 }
 
-/*
-   em function
-   ========================================================================== */
-
+/* em function */
 @function em($target, $context: $doc-font-size) {
   @return math.div($target, $context) * 1em;
 }
-
-
-/*
-   Bourbon clearfix
-   ========================================================================== */
-
-/*
-  * Provides an easy way to include a clearfix for containing floats.
-  * link http://cssmojo.com/latest_new_clearfix_so_far/
-  *
-  * example scss - Usage
-  *
-  * .element {
-  *   @include clearfix;
-  * }
-  *
-  * example css - CSS Output
-  *
-  * .element::after {
-  *   clear: both;
-  *   content: "";
-  *   display: table;
-  * }
-*/
 
 @mixin clearfix {
   clear: both;
@@ -54,11 +25,6 @@
   }
 }
 
-/*
-   Compass YIQ Color Contrast
-   https://github.com/easy-designs/yiq-color-contrast
-   ========================================================================== */
-
 @function yiq-is-light(
   $color,
   $threshold: $yiq-contrasted-threshold
@@ -66,11 +32,8 @@
   $red: red($color);
   $green: green($color);
   $blue: blue($color);
-
   $yiq: (($red*299)+($green*587)+($blue*114))*0.001;
-
   @if $yiq-debug { @debug $yiq, $threshold; }
-
   @return if($yiq >= $threshold, true, false);
 }
 

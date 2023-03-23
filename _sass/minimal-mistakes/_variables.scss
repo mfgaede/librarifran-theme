@@ -1,21 +1,10 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
-
-/*
-   Typography
-   ========================================================================== */
-
 $doc-font-size: 12 !default;
-
-/* paragraph indention */
-$paragraph-indent: false !default; // true, false (default)
+$paragraph-indent: false !default;
 $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
-$sans-serif: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
@@ -29,9 +18,9 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: "Atkinson Hyperlegible", $sans-serif !default;
-$header-font-family: "Atkison Hyperlegible", $sans-serif !default;
-$caption-font-family: "Atkison Hyperlegible", $sans-serif !default;
+$global-font-family: "Poppins", $sans-serif !default;
+$header-font-family: "Poppins", $sans-serif !default;
+$caption-font-family: "Poppins", $sans-serif !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
@@ -51,10 +40,7 @@ $h-size-4: 1.0625em !default; // ~17px
 $h-size-5: 1.03125em !default; // ~16.5px
 $h-size-6: 1em !default; // ~16px
 
-/*
-   Colors
-   ========================================================================== */
-
+/* Colors */
 $gray: #7a8288 !default;
 $dark-gray: mix(#000, $gray, 50%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
@@ -140,10 +126,7 @@ $base0d: #82aaff !default;
 $base0e: #c792ea !default;
 $base0f: #ff5370 !default;
 
-/*
-   Breakpoints
-   ========================================================================== */
-
+/* breakpoints */
 $small: 600px !default;
 $medium: 768px !default;
 $medium-wide: 900px !default;
@@ -151,18 +134,12 @@ $large: 1024px !default;
 $x-large: 1280px !default;
 $max-width: $x-large !default;
 
-/*
-   Grid
-   ========================================================================== */
-
+/* grid */
 $right-sidebar-width-narrow: 200px !default;
 $right-sidebar-width: 300px !default;
 $right-sidebar-width-wide: 400px !default;
 
-/*
-   Other
-   ========================================================================== */
-
+/* other */
 $border-radius: 4px !default;
 $box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;
 $nav-height: 2em !default;

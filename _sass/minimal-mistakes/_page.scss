@@ -1,6 +1,4 @@
-/* ==========================================================================
-   SINGLE PAGE/POST
-   ========================================================================== */
+/* single page / post */
 
 #main {
   @include clearfix;
@@ -110,10 +108,13 @@ body {
 		}
 	}
 
-  p,
-  li,
-  dl {
-    font-size: 1em;
+  p, li, dl {
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.8em;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 
   /* paragraph indents */
@@ -156,7 +157,7 @@ body {
   dt {
     margin-top: 1em;
     font-family: $sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
   }
 
   dd {
@@ -264,9 +265,7 @@ body {
   }
 }
 
-/*
-   Social sharing
-   ========================================================================== */
+/* social sharing */
 
 .page__share {
   margin-top: 2em;
@@ -293,10 +292,7 @@ body {
   text-transform: uppercase;
 }
 
-/*
-   Page meta
-   ========================================================================== */
-
+/* page meta */
 .page__meta {
   margin-top: 2em;
   color: $muted-text-color;
@@ -324,10 +320,7 @@ body {
   padding-right: 0.5em;
 }
 
-/*
-   Page taxonomy
-   ========================================================================== */
-
+/* page taxonomy */
 .page__taxonomy {
   .sep {
     display: none;
@@ -363,11 +356,13 @@ body {
 
   .archive__item-title {
     margin-top: 0;
+    text-align: left;
   }
 
   .archive__subtitle {
     clear: both;
     border: 0;
+    text-align: left;
   }
 
   + .taxonomy__section {
@@ -421,10 +416,7 @@ body {
   text-decoration: none;
 }
 
-/*
-   Comments
-   ========================================================================== */
-
+/* comments */
 .page__comments {
   float: left;
   margin-left: 0;
@@ -519,10 +511,7 @@ body {
   }
 }
 
-/*
-   Related
-   ========================================================================== */
-
+/* related */
 .page__related {
   @include clearfix();
   float: left;
@@ -550,10 +539,7 @@ body {
   text-transform: uppercase;
 }
 
-/*
-   Wide Pages
-   ========================================================================== */
-
+/* wide pages */
 .wide {
   .page {
     @include breakpoint($large) {

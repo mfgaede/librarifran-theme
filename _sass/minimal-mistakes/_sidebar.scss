@@ -1,45 +1,19 @@
-/* ==========================================================================
-   SIDEBAR
-   ========================================================================== */
+/* sidebar */
 
-/*
-   Default
-   ========================================================================== */
-
+/* default */
 .sidebar {
   @include clearfix();
-  // @include breakpoint(max-width $large) {
-  //   /* fix z-index order of follow links */
-  //   position: relative;
-  //   z-index: 10;
-  //   -webkit-transform: translate3d(0, 0, 0);
-  //   transform: translate3d(0, 0, 0);
-  // }
-
   @include breakpoint($large) {
     float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
-    //opacity: 0.75;
-    //-webkit-transition: opacity 0.2s ease-in-out;
-    //transition: opacity 0.2s ease-in-out;
-
-    //&:hover {
-    //  opacity: 1;
-    //}
-
     &.sticky {
       overflow-y: auto;
-      /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
-      */
       max-height: calc(100vh - #{$nav-height} - 2em);
     }
   }
-
   @include breakpoint($x-large) {
     width: calc(#{$right-sidebar-width} - 1em);
   }
-
   > * {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -117,10 +91,7 @@
   }
 }
 
-/*
-   Author profile and links
-   ========================================================================== */
-
+/* author profile and links */
 .author__avatar {
   display: table-cell;
   vertical-align: top;
@@ -324,10 +295,7 @@
   }
 }
 
-/*
-   Wide Pages
-   ========================================================================== */
-
+/* wide pages */
 .wide .sidebar__right {
   margin-bottom: 1em;
 
@@ -350,4 +318,3 @@
     margin-right: initial;
   }
 }
-

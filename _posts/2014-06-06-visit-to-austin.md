@@ -5,6 +5,7 @@ categories: [photos]
 gallery:
    - url: /assets/img/1912057_10152040316491261_6710165211235233514_o_10152040316491261.jpg
      image_path: /assets/img/thumbs/1912057_10152040316491261_6710165211235233514_o_10152040316491261.png
+     title: taken june 6, 2014. this poster was at the alamo drafthouse and is representative of the many wonderful things to look at in their lobby. 
    - url: /assets/img/1978559_10152036500936261_3767971924907617343_o_10152036500936261.jpg
      image_path: /assets/img/thumbs/1978559_10152036500936261_3767971924907617343_o_10152036500936261.png
    - url: /assets/img/10296386_10152038433586261_1112213234134033643_o_10152038433586261.jpg
@@ -17,6 +18,7 @@ gallery:
      image_path: /assets/img/thumbs/10369013_10152038790716261_3745606661710502024_o_10152038790716261.png
    - url: /assets/img/10371267_10152038334666261_102593833368465945_o_10152038334666261.jpg
      image_path: /assets/img/thumbs/10371267_10152038334666261_102593833368465945_o_10152038334666261.png
+     title: taken june 5, 2014. honey got a very special present from an amazing pet store in seattle, a catnip mousie recommended by resident felines ivar & vito. the laziest huntress kept an eye (paw) on her prize.
    - url: /assets/img/10372877_10152039666916261_5174184001144867697_o_10152039666916261.jpg
      image_path: /assets/img/thumbs/10372877_10152039666916261_5174184001144867697_o_10152039666916261.png
    - url: /assets/img/10379889_10152040324186261_1405553800737553741_o_10152040324186261.jpg

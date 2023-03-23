@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Syntax highlighting
-   ========================================================================== */
+/* syntax highlighting */
 
 div.highlighter-rouge,
 figure.highlight {
@@ -61,51 +59,51 @@ figure.highlight {
 }
 .highlight {
   .c {
-    /* Comment */
+    /* comment */
     color: $base04;
   }
   .err {
-    /* Error */
+    /* error */
     color: $base08;
   }
   .k {
-    /* Keyword */
+    /* keyword */
     color: $base0e;
   }
   .l {
-    /* Literal */
+    /* literal */
     color: $base09;
   }
   .n {
-    /* Name */
+    /* name */
     color: $base05;
   }
   .o {
-    /* Operator */
+    /* operator */
     color: $base0c;
   }
   .p {
-    /* Punctuation */
+    /* punctuation */
     color: $base05;
   }
   .cm {
-    /* Comment.Multiline */
+    /* comment.multiline */
     color: $base04;
   }
   .cp {
-    /* Comment.Preproc */
+    /* comment.preproc */
     color: $base04;
   }
   .c1 {
-    /* Comment.Single */
+    /* comment.single */
     color: $base04;
   }
   .cs {
-    /* Comment.Special */
+    /* comment.special */
     color: $base04;
   }
   .gd {
-    /* Generic.Deleted */
+    /* generic.deleted */
     color: $base08;
   }
   .ge {
@@ -308,11 +306,11 @@ figure.highlight {
     color: $base08;
   }
   .vi {
-    /* Name.Variable.Instance */
+    /* name.variable.instance */
     color: $base08;
   }
   .il {
-    /* Literal.Number.Integer.Long */
+    /* literal.number.integer.long */
     color: $base09;
   }
 }

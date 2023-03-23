@@ -1,5 +1,5 @@
 ---
-title: "council of independent colleges workshop - information fluency in the disciplines"
+title: "information fluency in the disciplines"
 date: 2015-03-06 08:00:00 +0000
 categories: [photos]
 gallery:

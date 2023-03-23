@@ -1,17 +1,6 @@
 main:
 - title: "blog"
   url: /year-archive/
+- title: "cv"
+  url: /cv/
 #sidebar
-categoryposts:
-  - title: blog
-    children:
-     - title: "photos"
-       url: /categories/#photos
-     - title: "links"
-       url: /categories/#links
-     - title: "music"
-       url: /categories/#music
-     - title: "videos"
-       url: /categories/#videos
-     - title: "art"
-       url: /categories/#art

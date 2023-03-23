@@ -1,12 +1,6 @@
-/* ==========================================================================
-   UTILITY CLASSES
-   ========================================================================== */
+/* UTILITY CLASSES */
 
-/*
-   Visibility
-   ========================================================================== */
-
-/* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
+/* visibility */
 
 .hidden,
 .is--hidden {
@@ -15,7 +9,6 @@
 }
 
 /* for preloading images */
-
 .load {
   display: none;
 }
@@ -23,8 +16,6 @@
 .transparent {
   opacity: 0;
 }
-
-/* https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html */
 
 .visually-hidden,
 .screen-reader-text,
@@ -45,7 +36,6 @@ body:hover .visually-hidden button {
 }
 
 /* screen readers */
-
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus {
   clip: auto !important;
@@ -61,10 +51,7 @@ body:hover .visually-hidden button {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-/*
-   Skip links
-   ========================================================================== */
-
+/* skip links */
 .skip-link {
   position: fixed;
   z-index: 20;
@@ -79,10 +66,7 @@ body:hover .visually-hidden button {
   list-style: none;
 }
 
-/*
-   Type
-   ========================================================================== */
-
+/* type */
 .text-left {
   text-align: left;
 }
@@ -103,10 +87,7 @@ body:hover .visually-hidden button {
   white-space: nowrap;
 }
 
-/*
-   Task lists
-   ========================================================================== */
-
+/* task lists */
 .task-list {
   padding:0;
 
@@ -124,12 +105,9 @@ body:hover .visually-hidden button {
   margin-left: 1em;
 }
 
-/*
-   Alignment
-   ========================================================================== */
+/* alignment */
 
 /* clearfix */
-
 .cf {
   clear: both;
 }
@@ -140,12 +118,9 @@ body:hover .visually-hidden button {
   width: 100%;
 }
 
-/*
-   Images
-   ========================================================================== */
+/* images */
 
 /* image align left */
-
 .align-left {
   display: block;
   margin-left: auto;
@@ -158,7 +133,6 @@ body:hover .visually-hidden button {
 }
 
 /* image align right */
-
 .align-right {
   display: block;
   margin-left: auto;
@@ -171,7 +145,6 @@ body:hover .visually-hidden button {
 }
 
 /* image align center */
-
 .align-center {
   display: block;
   margin-left: auto;
@@ -179,17 +152,13 @@ body:hover .visually-hidden button {
 }
 
 /* file page content container */
-
 .full {
   @include breakpoint($large) {
     margin-right: -1 * span(2.5 of 12) !important;
   }
 }
 
-/*
-   Icons
-   ========================================================================== */
-
+/* icons */
 .icon {
   display: inline-block;
   fill: currentColor;
@@ -202,7 +171,6 @@ body:hover .visually-hidden button {
 }
 
 /* social icons*/
-
 .social-icons {
   .fas,
   .fab,
@@ -326,10 +294,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Navicons
-   ========================================================================== */
-
+/* navicons */
 .navicon {
   position: relative;
   width: $navicon-width;
@@ -361,10 +326,7 @@ body:hover .visually-hidden button {
 }
 
 .close .navicon {
-  /* hide the middle line*/
   background: transparent;
-
-  /* overlay the lines by setting both their top values to 0*/
   &:before,
   &:after {
     -webkit-transform-origin: 50% 50%;
@@ -426,10 +388,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Sticky, fixed to top content
-   ========================================================================== */
-
+/* sticky, fixed to top content */
 .sticky {
   @include breakpoint($large) {
     @include clearfix();
@@ -443,10 +402,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Wells
-   ========================================================================== */
-
+/* wells */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -457,10 +413,7 @@ body:hover .visually-hidden button {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/*
-   Modals
-   ========================================================================== */
-
+/* modals */
 .show-modal {
   overflow: hidden;
   position: relative;
@@ -511,10 +464,7 @@ body:hover .visually-hidden button {
   }
 }
 
-/*
-   Footnotes
-   ========================================================================== */
-
+/* footnotes */
 .footnote {
   color: mix(#fff, $gray, 25%);
   text-decoration: none;
@@ -540,19 +490,14 @@ a.reversefootnote {
   }
 }
 
-/*
-   Required
-   ========================================================================== */
+/* required */
 
 .required {
   color: $danger-color;
   font-weight: bold;
 }
 
-/*
-   Google Custom Search Engine
-   ========================================================================== */
-
+/* google custom search engine */
 .gsc-control-cse {
   table,
   tr,
@@ -561,9 +506,7 @@ a.reversefootnote {
   }
 }
 
-/*
-   Responsive Video Embed
-   ========================================================================== */
+/* responsive video embed */
 
 .responsive-video-container {
   position: relative;

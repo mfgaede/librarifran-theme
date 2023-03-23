@@ -1,7 +1,4 @@
-/* ==========================================================================
-   BASE ELEMENTS
-   ========================================================================== */
-
+/* base elements */
 html {
   /* sticky footer fix */
   position: relative;
@@ -81,7 +78,6 @@ del a {
 }
 
 /* reduce orphans and widows when printing */
-
 p,
 pre,
 blockquote,
@@ -96,7 +92,6 @@ fieldset {
 }
 
 /* abbreviations */
-
 abbr[title],
 abbr[data-original-title] {
   text-decoration: none;
@@ -105,7 +100,6 @@ abbr[data-original-title] {
 }
 
 /* blockquotes */
-
 blockquote {
   margin: 2em 1em 2em 0;
   padding-left: 1em;
@@ -124,7 +118,6 @@ blockquote {
 }
 
 /* links */
-
 a {
   &:focus {
     @extend %tab-focus;
@@ -137,13 +130,11 @@ a {
 }
 
 /* buttons */
-
 button:focus {
   @extend %tab-focus;
 }
 
 /* code */
-
 tt,
 code,
 kbd,
@@ -157,7 +148,6 @@ pre {
 }
 
 /* horizontal rule */
-
 hr {
   display: block;
   margin: 1em 0;
@@ -166,7 +156,6 @@ hr {
 }
 
 /* lists */
-
 ul li,
 ol li {
   margin-bottom: 0.5em;
@@ -177,12 +166,9 @@ li ol {
   margin-top: 0.5em;
 }
 
-/*
-   Media and embeds
-   ========================================================================== */
+/* media and embeds */
 
-/* Figures and images */
-
+/* figures and images */
 figure {
   display: -webkit-box;
   display: flex;
@@ -237,8 +223,7 @@ figure {
   }
 }
 
-/* Figure captions */
-
+/* figure captions */
 figcaption {
   margin-bottom: 0.5em;
   color: $muted-text-color;
@@ -255,29 +240,12 @@ figcaption {
   }
 }
 
-/* Fix IE9 SVG bug */
-
+/* fix ie9 svg bug */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/*
-   Navigation lists
-   ========================================================================== */
-
-/**
- * Removes margins, padding, and bullet points from navigation lists
- *
- * Example usage:
- * <nav>
- *    <ul>
- *      <li><a href="#link-1">Link 1</a></li>
- *      <li><a href="#link-2">Link 2</a></li>
- *      <li><a href="#link-3">Link 3</a></li>
- *    </ul>
- *  </nav>
- */
-
+/* navigation lists */
 nav {
   ul {
     margin: 0;
@@ -292,7 +260,7 @@ nav {
     text-decoration: none;
   }
 
-  /* override white-space for nested lists */
+/* override white-space for nested lists */
   ul li,
   ol li {
     margin-bottom: 0;
@@ -304,9 +272,7 @@ nav {
   }
 }
 
-/*
-   Global animation transition
-   ========================================================================== */
+/* global animation transition */
 
 b,
 i,

@@ -1,5 +1,5 @@
 ---
-title: "indiana state museum - star wars: where science meets imagination"
+title: "star wars: where science meets imagination"
 date: 2013-09-01 08:00:00 +0000
 categories: [photos]
 gallery:

@@ -1,6 +1,4 @@
-/* ==========================================================================
-   STYLE RESETS
-   ========================================================================== */
+/* style resets */
 
 * { box-sizing: border-box; }
 
@@ -26,12 +24,10 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-/* Remove margin */
-
+/* remove margin */
 body { margin: 0; }
 
-/* Selected elements */
-
+/* selected elements */
 ::-moz-selection {
   color: #fff;
   background: #000;
@@ -42,8 +38,7 @@ body { margin: 0; }
   background: #000;
 }
 
-/* Display HTML5 elements in IE6-9 and FF3 */
-
+/* display html5 elements in IE6-9 and FF3 */
 article,
 aside,
 details,
@@ -58,8 +53,7 @@ section {
   display: block;
 }
 
-/* Display block in IE6-9 and FF3 */
-
+/* display block in ie6-9 and ff3 */
 audio,
 canvas,
 video {
@@ -68,8 +62,7 @@ video {
   *zoom: 1;
 }
 
-/* Prevents modern browsers from displaying 'audio' without controls */
-
+/* prevents modern browsers from displaying 'audio' without controls */
 audio:not([controls]) {
   display: none;
 }
@@ -78,21 +71,18 @@ a {
   color: $link-color;
 }
 
-/* Apply focus state */
-
+/* apply focus state */
 a:focus {
   @extend %tab-focus;
 }
 
-/* Remove outline from links */
-
+/* remove outline from links */
 a:hover,
 a:active {
   outline: 0;
 }
 
-/* Prevent sub and sup affecting line-height in all browsers */
-
+/* prevent sub and sup affecting line-height in all browsers */
 sub,
 sup {
   position: relative;
@@ -110,7 +100,6 @@ sub {
 }
 
 /* img border in anchor's and image quality */
-
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
   max-width: 100%; /* part 1: Set a maximum relative to the parent*/
@@ -122,15 +111,13 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* Prevent max-width from affecting Google Maps */
-
+/* prevent max-width from affecting google maps */
 #map_canvas img,
 .google-maps img {
   max-width: none;
 }
 
-/* Consistent form font size in all browsers, margin changes, misc */
-
+/* consistent form font size in all browsers, margin changes, misc */
 button,
 input,
 select,
@@ -142,8 +129,8 @@ textarea {
 
 button,
 input {
-  *overflow: visible; /* inner spacing ie IE6/7*/
-  line-height: normal; /* FF3/4 have !important on line-height in UA stylesheet*/
+  *overflow: visible; /* inner spacing ie ie6/7*/
+  line-height: normal; /* ff3/4 have !important on line-height in UA stylesheet*/
 }
 
 button::-moz-focus-inner,

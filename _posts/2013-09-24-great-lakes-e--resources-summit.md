@@ -1,5 +1,5 @@
 ---
-title: "great lakes e-resources summit at maumee bay state park lodge and conference center"
+title: "great lakes e-resources summit"
 date: 2013-09-24 08:00:00 +0000
 categories: [photos]
 gallery:
