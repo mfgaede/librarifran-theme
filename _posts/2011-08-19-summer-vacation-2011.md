@@ -3,6 +3,16 @@ title: "summer vacation 2011"
 date: 2011-08-19 08:00:00 +0000
 categories: [photos]
 gallery: 
+   - url: /assets/img/bradytx1.jpg
+     image_path: /assets/img/thumbs/bradytx1.png
+   - url: /assets/img/bradytx2.jpg
+     image_path: /assets/img/thumbs/bradytx2.png
+   - url: /assets/img/bradytx3.jpg
+     image_path: /assets/img/thumbs/bradytx3.png
+   - url: /assets/img/bradytx4.jpg
+     image_path: /assets/img/thumbs/bradytx4.png
+   - url: /assets/img/bradytx5.jpg
+     image_path: /assets/img/thumbs/bradytx5.png
    - url: /assets/img/8b6ac6969c.jpg
      image_path: /assets/img/thumbs/8b6ac6969c.png
    - url: /assets/img/0629084845.jpg
