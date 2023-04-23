@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: home
 author_profile: true
 sidebar:
  nav: "categoryposts"
@@ -10,12 +10,3 @@ header:
   caption: "photo: [florencia viadana via unsplash](https://unsplash.com/photos/jReenm8gCXs)"
 classes: wide
 ---
-
-<h3>recent posts</h3>
-<div>
-  <div class="grid__wrapper">
-  {% for post in site.posts limit:4 %}
-    {% include archive-single.html type="grid" %}
-  {% endfor %}
-</div>
-</div>

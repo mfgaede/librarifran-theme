@@ -1,21 +1,10 @@
 ---
-layout: archive
-author_profile: true
-pagination: 
-  enabled: true
-sidebar:
- nav: "categoryposts"
+layout: single
 ---
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "recent posts" }}</h3>
-
-  {% assign posts = paginator.posts %}
-
-{% assign entries_layout = grid | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+{% include mastodon.html %}
+  <h3>recent posts</h3>
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="list" %}
   {% endfor %}
-</div>
-
-{% include paginator.html %}
+  {% for post in paginator.posts limit:5 %}
+{% endfor %}
