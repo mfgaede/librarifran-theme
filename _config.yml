@@ -1,15 +1,15 @@
 theme                    : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "dark"
 locale                   : "en-US"
-title                    : "what's the worst that could happen"
+title                    : "franny gaede"
 title_separator          : "-"
 subtitle                 : experiments in diy infrastructure
-name                     : "franny gaede"
+name                     : ""
 url                      : https://librarifran.com
 repository               : "mfgaede/librarifran-theme"
 teaser                   : #path of fallback teaser
 logo                     : #path of logo for masthead
-masthead_title           : "what's the worst that could happen"
+masthead_title           : ""
 breadcrumbs              :  false
 atom_feed:
   path                   : # blank (default) uses feed.xml
@@ -160,6 +160,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-liquify
+  - jekyll-pdf-embed
 #Archives
 category_archive:
   type: liquid

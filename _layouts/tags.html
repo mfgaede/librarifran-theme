@@ -3,6 +3,7 @@ layout: archive
 author_profile: true
 ---
 
+<br />
 <a href="/categories/" class="btn btn--primary">view by category</a>   <a href="/year-archive/" class="btn btn--primary">view by year</a>
 
 {{ content }}
@@ -20,7 +21,7 @@ author_profile: true
       {% if tag[1].size == i %}
         <li>
           <a href="#{{ tag[0] | slugify }}">
-            <strong>{{ tag[0] }}</strong> <span class="taxonomy__count">{{ i }}</span>
+            {{ tag[0] }} <span class="taxonomy__count">{{ i }}</span>
           </a>
         </li>
       {% endif %}
