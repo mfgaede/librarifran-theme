@@ -1,5 +1,5 @@
 ---
-title: "like wordle"
+title: "Like Wordle"
 date: 2022-08-17 19:53:08 +0000
 categories: [links]
 

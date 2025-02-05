@@ -1,6 +1,29 @@
 main:
-- title: "blog"
-  url: /year-archive/
-- title: "cv"
+- title: "Home"
+  url: /
+- title: "Blog"
+  url: /blog/
+- title: "Defaults"
+  url: /defaults/
+- title: "Now"
+  url: /now/
+- title: "CV"
   url: /cv/
-#sidebar
+
+sidebar: 
+- title: Blog
+  children: 
+    - title: "💻 Posts"
+      url: /posts/
+    - title: "💼 Work"
+      url: /work/
+    - title: "📷 Photos"
+      url: /photos/
+    - title: "🔗 Links"
+      url: /links/
+    - title: "🎵 Music"
+      url: /music/
+    - title: "📽️ Videos"
+      url: /videos/
+    - title: "🎨 Art"
+      url: /art/

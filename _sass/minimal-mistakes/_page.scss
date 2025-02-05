@@ -421,6 +421,7 @@ body {
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 2rem;
   width: 100%;
   clear: both;
 }
@@ -526,10 +527,6 @@ body {
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-  }
-
-  a {
-    color: #ff9595;
   }
 }
 

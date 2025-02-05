@@ -1,10 +1,6 @@
 ---
-title: "posts by category"
+title: "Posts by Category"
 permalink: /categories/
 layout: categories
-author_profile: true
-pagination: 
-  enabled: true
-sidebar:
- nav: "categoryposts"
 ---
+[View Posts by Year](/blog){: .btn .btn--info .btn--large} [View Posts by Tag](/tags){: .btn .btn--info .btn--large}

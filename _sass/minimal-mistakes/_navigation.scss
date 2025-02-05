@@ -508,10 +508,7 @@
   // scrollspy marks toc items as .active when they are in focus
   .active 
   a { 
-    border-top: 2px solid #ff9595;
-    border-bottom: 2px solid #ff9595;
-    border-left: 2px solid #ff9595;
-    border-right: 2px solid #ff9595;
+    @include yiq-contrasted($active-color);
   }
 }
 

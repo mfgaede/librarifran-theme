@@ -1,5 +1,5 @@
 ---
-title: "summer garden"
+title: "Summer Garden"
 date: 2022-07-24 08:00:00 +0000
 categories: [photos]
 gallery:

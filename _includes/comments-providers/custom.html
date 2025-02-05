@@ -1,3 +1,35 @@
-<!-- start custom comments snippet -->
+<div id="page__comments" style="min-height: 100px;">
+    <div id="loading">Loading comments...</div>
+</div>
 
-<!-- end custom comments snippet -->
+<script type="module">
+    try {
+        const modules = await Promise.all([
+            import('https://esm.sh/stable/react@18.2.0/es2022/react.mjs'),
+            import('https://esm.sh/stable/react-dom@18.2.0/es2022/react-dom.mjs'),
+            import('https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.es.js')
+        ]);
+        
+        const [React, ReactDOM, BlueskyCommentsModule] = modules;
+        const BlueskyComments = BlueskyCommentsModule.BlueskyComments;
+        
+        const container = document.getElementById('page__comments');
+        const uri = "{{ page.bluesky_post_uri }}";
+        
+        if (container) {
+            const root = ReactDOM.createRoot(container);
+            const element = React.createElement(BlueskyComments, {
+                uri,
+                author: "librarifran.bsky.social",
+                showLogin: true,
+                onLoad: () => document.getElementById('loading')?.remove()
+            });
+            
+            root.render(element);
+        }
+    } catch (error) {
+        console.error('Error loading comments:', error);
+        document.getElementById('page__comments').innerHTML = 
+            `<div style="color: red;">Unable to load comments. Please try again later.</div>`;
+    }
+</script>

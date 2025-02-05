@@ -1,5 +1,5 @@
 ---
-title: "cv"
+title: "CV"
 permalink: /cv/
 layout: single
 toc: true
@@ -9,20 +9,31 @@ toc_sticky: true
 
 ### University of Oregon Libraries
 
-Director, Digital Scholarship Services  
+*Strategic Projects Librarian*  
 Eugene, Oregon  
-August 2017 - present  
+July 2024 - present  
 
-- Supervising Digital Scholarship Services personnel with up to 9.25 FTE reporting, including faculty, staff, and students whose positions are full- and part-time, union and non-union, permanent, temporary, and funding-contingent.
-- Managing seven Digital Scholarship Services budget indexes over $1.3 million, including an income line, two student budgets, three supplies budgets, plus two grant budget lines, consistently staying under budget while maximizing services, library spaces, and staff professional development.
-- Developing and overseeing exhibits, events, technologies, and, services in the new Digital Research, Education, and Media (DREAM) Lab, supporting instructional needs across the curriculum to address digital fluency, intellectual property, scholarly communication, and new models of research and knowledge production.
-- Coordinating and managing development, maintenance, and enhancement of digital collections platforms with over 1.6 million unique cultural heritage and scholarly works
-- Managing the University’s open access publishing efforts and collaborating with partners to promote open access on campus, including passing the first comprehensive open access policy through University Senate, managing an Article Processing Fund, and supporting the adoption, remixing, and creation of Open Educational Resources and low-cost course materials.
-- Supporting faculty, staff, and students in the creation of digital scholarship projects for research and pedagogy through collaboration, consultation, and curriculum development.
+- Designing, leading, and completing strategic projects in support of Libraries, Department of Open Research, and Digital Publishing & Pedagogies goals, including outreach initiatives, training programs, and platform development and management
+- Developing a service model for open access journal publishing and providing consultation and support to editors on creating new journals, converting existing journals to open access, and open access infrastructure
+- Serves as the subject liaison for Public Planning, Policy, and Management
+- Teaches workshops, for-credit courses, and embedded classes, developing and maintaining instructional materials including tutorials, Canvas modules, and LibGuides (Research Guides)
+- Consults with students, faculty, staff, labs, and classes online and in-person related to digital pedagogy tools and topics.
+
+*Director, Department of Open Research*  
+*Director, Digital Scholarship Services*  
+Eugene, Oregon  
+August 2017 - July 2024
+
+- Supervised Libraries personnel with up to 9.25 FTE reporting, including faculty, staff, and students whose positions are full- and part-time, union and non-union, permanent, temporary, and funding-contingent. 
+- Managed up to seven budget indexes over $1.3 million, including an income line, two student budgets, three supplies budgets, plus two grant budget lines, consistently staying under budget while maximizing services, library spaces, and staff professional development.
+- Led the University’s open access publishing efforts and collaborated with partners to promote open access on campus, including passing the first comprehensive open access policy through University Senate, managing an Article Processing Fund, and supporting the adoption, remixing, and creation of Open Educational Resources and low-cost course materials.
+- Led the University’s support for research data, including the development of a data repository, extracurricular training and workshops, consultation services, and data management plan development.
+- Led support for faculty, staff, and students in the creation of public scholarship projects for research and pedagogy through collaboration, consultation, and curriculum development to address digital fluency, intellectual property, scholarly communication, and new models of research and knowledge production.
+- Developed, launched, and ran the DREAM (Digital Research, Education, and Media) Lab to support digital research and pedagogy collaborations, instruction, and consultations from February 2019 - August 2023.
 
 ### Butler University Libraries
 
-Scholarly Communication Librarian  
+*Scholarly Communication Librarian*  
 Indianapolis, Indiana  
 August 2013 - July 2017  
 
@@ -38,7 +49,7 @@ August 2013 - July 2017
 
 ### University of Texas at Austin
 
-Graduate Student Technician for Perry Castañeda Libraries  
+*Graduate Student Technician for Perry Castañeda Libraries*  
 Austin, Texas  
 May 2012 - July 2013  
 
@@ -48,7 +59,7 @@ May 2012 - July 2013
 - Administered the library’s data management WordPress blog
 - Redesigned departmental SharePoint intranet
 
-Teaching Assistant for the University of Texas iSchool  
+*Teaching Assistant for the University of Texas iSchool*  
 Austin, Texas  
 May 2012 - May 2013  
 
@@ -59,7 +70,7 @@ May 2012 - May 2013
 
 ### University of Arizona
 
-Information Commons Library Assistant  
+*Information Commons Library Assistant*  
 Tucson, Arizona  
 Aug. 2008 - May 2009  
 
@@ -68,34 +79,30 @@ Aug. 2008 - May 2009
 
 ## Education
 
-### The University of Texas at Austin
+### The University of Texas at Austin  
+Austin, Texas  
 
-M.S. in Information Studies, 3.95 GPA  
+M.S. in Information Studies  
 Focus: Digital Libraries  
 Capstone: [Alphabet Soup: METS, MODS, and Metadata Guidelines for Still Images](/work/2013/05/18/alphabet-soup.html)  
+ 
+B.A. with Highest Honors in History  
 Austin, Texas  
-August 2011 - May 2013  
-  
-B.A. with Highest Honors in History, 3.94 GPA  
-Austin, Texas  
-Aug. 2009 - May 2011  
-
-### The University of Arizona
-
-59 Credits toward B.A. in History, 4.0 GPA  
-Tucson, Arizona  
-Aug. 2007 - May 2009
 
 ## Publications
 
+Rigby, M. & Gaede, F. (2025). Uniting Policy, Advocacy, and Education: Reframing the Open Access Policy as a Statement of Values in the Time of Funder Mandates. In R. Pun, S. Durney, & T. Anantachai (Eds.), *Legislative Advocacy and Public Policy for Academic Library Workers.* ACRL Publications. (forthcoming)
+
 Gaede. F., Lara, A-M., Reyes-Santos, A. & Thornhill, K. (2022). Afro-Indigenous Women Healers in the Caribbean and Its Diasporas: A Decolonial Digital Humanities Project. *Digital Humanities Quarterly*. 16, 3. [http://www.digitalhumanities.org/dhq/vol/16/3/000631/000631.html](http://www.digitalhumanities.org/dhq/vol/16/3/000631/000631.html)
 
-Gaede, F. & Thornhill, K., (2022). Teaching Copyright through Pop Culture for Public Scholarship-Based Instruction. In M. E. Johnson, T. Weeks, & J. P. Davis (Eds.), *Integrating Pop Culture into the Academic Library*. Rowman & Littlefield.
+Gaede, F. & Thornhill, K., (2022). Teaching Copyright through Pop Culture for Public Scholarship-Based Instruction. In M. E. Johnson, T. Weeks, & J. P. Davis (Eds.), *Integrating Pop Culture into the Academic Library*. Rowman & Littlefield. Postprint version: [https://scholarsbank.uoregon.edu/xmlui/handle/1794/28205](https://scholarsbank.uoregon.edu/xmlui/handle/1794/28205)
 
 Heller, M. & Gaede, F., (2016). Measuring Altruistic Impact: A Model for Understanding the Social Justice of Open Access. *Journal of Librarianship and Scholarly Communication*. 4, p.eP2132. [http://doi.org/10.7710/2162-3309.2132](http://doi.org/10.7710/2162-3309.2132)
 
 ## Grants
 
+- Burkert, M. (2024). Extending the London Stage Database. *NEH Digital Humanities Advancement Grants*.
+$350,000 awarded. Key personnel.  
 - Gaede, F., Snipes, G., Thornhill, K., and Vieger, R. (2022). Mobile Library Videography Support Kit. University of Oregon *Libraries Innovation Grant*. $4,540 awarded. Project Team Leader.
 - Vieger, R. (2022). [Pressbooks Pilot for Open Educational Resource (OER) & Open Access (OA) Monograph Publishing](https://opentext.uoregon.edu/). University of Oregon *Libraries Innovation Grant*. $4,999 awarded. Project Team Member.
 - Ketchum, D. (2022). [Knight Library Tiny Phone Booth Galleries](https://library.uoregon.edu/Tiny-Galleries). University of Oregon *Libraries Innovation Grant*. $3,250 awarded. Project Team Member.
@@ -108,6 +115,8 @@ Heller, M. & Gaede, F., (2016). Measuring Altruistic Impact: A Model for Underst
 
 ## Peer-Reviewed & Invited Presentations, Workshops & Webinars
 
+- Collaboration for Climate Justice: Ethical Digital Stewardship for The Healers Project. Society of American
+Archivists 2023 Conference. July 26-29, 2023  
 - [Oregon Digital 2.0: New Look and Functionality](https://samvera.atlassian.net/wiki/spaces/samvera/pages/2072084481/Virtual+Posters+for+Connect+2022), Samvera Connect 2022, October 26, 2022
 - [Wait, You Don’t Have an Open Access Policy?: Passing an OA Policy in 2021](https://pdxscholar.library.pdx.edu/onlinenorthwest/2022/schedule/13/), Online Northwest, March 25, 2022
 - [Bring Your Whole Person to Work Day: Student Professional Development in the Time of COVID-19]({% post_url 2022-03-01-bring-your-whole-person %}), University of Oregon Student Employment Enhancement Summit: From Menial to Meaningful: Building Self-Efficacy to Empower Student Employees, March 1, 2022
@@ -126,7 +135,7 @@ Heller, M. & Gaede, F., (2016). Measuring Altruistic Impact: A Model for Underst
 - [Owning Your Omeka: Teaching DIY Digital Scholarship through a Scaffolded Workshop Series](https://pdxscholar.library.pdx.edu/oer_symposium/2019/program/27/), 2019 Open Educational Resources Symposium, May 17, 2019
 - [Bringing #DigiPres to Digital Project Management](https://www2.archivists.org/groups/preservation-section/prestc19-preservation-week-twitter-conference), Society of American Archivists Preservation Week Twitter Conference, April 24, 2019
 - [Social Justice and Scholarly Communication, Digital Libraries: How New and Emerging Technologies Enhance and Reinforce the Mission of Academic Libraries Panel](/work/2019/04/12/conferences-in-st-louis-and-portland.html), What is Technology?, April 12, 2019
-- [Sustainability for Project-Based Collaborative Work: Leveraging Service Level Agreements and Virtual Teams](/work/2019/04/12/back-to-back-conferences-in-st.-louis-and-portland.html), Coalition for Networked Information Spring 2019 Membership Meeting, April 9, 2019
+- [Sustainability for Project-Based Collaborative Work: Leveraging Service Level Agreements and Virtual Teams](/work/2019/04/12/conferences-in-st-louis-and-portland.html), Coalition for Networked Information Spring 2019 Membership Meeting, April 9, 2019
 - Invited Talk: Indexing the Open Access Journal: A Conversation, American Library Association Midwinter Meeting, Scholarly Communication Interest Group, January 26, 2019
 - [Applying Digital Preservation Management to Digital Scholarship Service Models]({% post_url 2018-10-16-applying-digital-preservation %}), Digital Library Federation 2018 Forum, October 16, 2018
 - Invited Keynote: Building Our Past, Present, and Future: Exploring Sustainable Models for Library-Faculty Collaboration, Digital Collections in Teaching and Research, May 24, 2018
@@ -185,35 +194,11 @@ Heller, M. & Gaede, F., (2016). Measuring Altruistic Impact: A Model for Underst
 
 *Service to Libraries*
 
-Chair, Director of Research Description Services Search Committee  
-February 2023 - present
-
-Member, Liaison Data Task Force  
-January 2023 - present
-
-Member, Libraries 2022 Mission, Vision, and Strategy Steering Committee  
-May 2022 - present
-
-Member, Advisory Board for Libraries Award for Undergraduate Research Excellence (LAURE)  
-February 2022 - present
-
-Vice Chair, Outreach Team  
-January 2022 - present
-
 Chair, University of Oregon Library Staff Association  
-July 2021 - present
-
-Member, Library Faculty Personnel Committee  
-June 2021 - present
+July 2021 - September 2023, July 2024 - present
 
 Main/Voting Contact, ORCID US Community for University of Oregon  
 July 2018 - present
-
-Member, Shared Governance Council for Oregon Digital  
-November 2017 - present
-
-Member, Shared Governance Board for Oregon Digital  
-November 2017 - present
 
 Member, Library Leadership Team (formerly Council)  
 August 2017 - present
@@ -221,8 +206,47 @@ August 2017 - present
 Member, Library Faculty and Officers of Administration  
 August 2017 - present
 
+Member, Scholars’ Bank Steering Committee  
+May 2023 - August 2024
+
+Chair, Scholars’ Bank Marketing Sub-Committee  
+May 2023 - August 2024
+
+Member, Digital Technology Council  
+August 2023 - July 2024
+
+Member, Advisory Board for Libraries Award for Undergraduate Research Excellence (LAURE)  
+February 2022 - July 2024
+
+Vice Chair, Outreach Team  
+January 2022 - August 2023
+
+Chair, Director of Research Description Services Search Committee  
+February 2023 - August 2023
+
+Member, Shared Governance Council for Oregon Digital  
+November 2017 - August 2023
+
+Member, Shared Governance Board for Oregon Digital  
+November 2017 - August 2023
+
+Member, Library Faculty Personnel Committee  
+June 2021 - June 2023
+
+Member, Liaison Data Task Force  
+January 2023 - April 2023
+
 Member, Committee on UO Libraries Career Faculty Merit Awards  
 November 2022 - April 2023
+
+Member, Libraries 2022 Mission, Vision, and Strategy Steering Committee  
+May 2022 - March 2023
+
+Co-Chair, Article Processing Charges Committee  
+October 2020 - March 2023
+
+Representative, Samvera Partners for Oregon Digital  
+September 2017 - March 2023
 
 Member, Fall Kick-Off Committee  
 September 2022 - October 2022
@@ -233,17 +257,14 @@ August 2022 - November 2022
 Search Advocate, Law Reference Librarian Search Committee  
 August 2022 - November 2022
 
-Member, Fall Employee Event Committee  
-September 2021 - December 2021
-
-Co-Chair, Fall Kick-Off Committee
-August 2021 - October 2021
-
 Member, Librarians’ Performance Reviews Task Force  
 July 2021 - May 2022
 
-Co-Chair, Article Processing Charges Committee  
-October 2020 - March 2023
+Member, Fall Employee Event Committee  
+September 2021 - December 2021
+
+Co-Chair, Fall Kick-Off Committee  
+August 2021 - October 2021
 
 Chair, Events Committee, University of Oregon Library Staff Association  
 September 2020 - July 2021
@@ -251,35 +272,17 @@ September 2020 - July 2021
 Chair, Web Services Librarian Search Committee  
 September 2019 - March 2020
 
-Chair, eLearning and Open Educational Resources Librarian Search Committee  
-November 2018 - January 2019
-
-Chair, Digitization Technician and Library Support Specialist Search Committee  
-October 2018 - November 2018
-
-Presiding Officer, Library Faculty and Officers of Administration  
-June 2018 - May 2019
-
-Member, Librarian for Research Data Management and Reproducibility Search Committee  
-June 2018 - August 2018
-
-Member, Digital Collections Metadata Librarian Search Committee  
-January 2018 - March 2018
-
-Co-Leader, Digital Scholarship Center Advisory Council  
-December 2017 - July 2019
-
-Leader, Digital Exhibits Platform Exploration Task Force  
-November 2017 - July 2018
+Community Liaison, DuraSpace/Fedora for University of Oregon  
+September 2017 - March 2020
 
 Member, Data Visualization Working Group  
 October 2017 - January 2020
 
-Representative, Samvera Partners for Oregon Digital  
-September 2017 - March 2023
+Co-Leader, Digital Scholarship Center Advisory Council  
+December 2017 - July 2019
 
-Community Liaison, DuraSpace/Fedora for University of Oregon  
-September 2017 - March 2020
+Member, Digital Projects Librarian Search Committee  
+August 2017 - November 2017
 
 Member, Knight Library Academic Design and Innovation Lab Planning Task Force  
 August 2017 - July 2019
@@ -287,45 +290,60 @@ August 2017 - July 2019
 Member, Library Technologies Group  
 August 2017 - July 2019
 
-Member, Digital Projects Librarian Search Committee  
-August 2017 - November 2017
+Presiding Officer, Library Faculty and Officers of Administration  
+June 2018 - May 2019
+
+Chair, eLearning and Open Educational Resources Librarian Search Committee  
+November 2018 - January 2019
+
+Chair, Digitization Technician and Library Support Specialist Search Committee  
+October 2018 - November 2018
+
+Member, Librarian for Research Data Management and Reproducibility Search Committee  
+June 2018 - August 2018
+
+Member, Digital Collections Metadata Librarian Search Committee  
+January 2018 - March 2018
+
+Leader, Digital Exhibits Platform Exploration Task Force  
+November 2017 - July 2018
 
 *Service to University*
 
-Member, Public Computing Council  
-February 2023 - present
-
-Member, Undergraduate Research Symposium Steering Committee  
+Member, Undergraduate Research Symposium Steering Committee
 October 2022 - present
 
-University of Oregon Search Advocate  
+University of Oregon Search Advocate
 June 2021 - present
 
-Member, Women in Data Science Eugene Planning Committee  
-January 2023 - March 2023
-
-Member, Vice Provost and University Librarian Search Committee  
-October 2019 - February 2021
-
-Member, New Media & Culture Certificate Advisory Board  
+Member, New Media & Culture Certificate Advisory Board
 November 2017 - present
 
-Committee Web Manager, Senate Sub-Committee on Open Access, University of Oregon Faculty Senate  
+Member, Public Computing Council
+February 2023 - August 2023
+
+Member, Women in Data Science Eugene Planning Committee
+January 2023 - March 2023
+
+Committee Web Manager, Senate Sub-Committee on Open Access, University of Oregon Faculty Senate
 December 2019 - May 2021
 
-Abstract Reviewer, Undergraduate Research Symposium  
-April 2019
+Member, Vice Provost and University Librarian Search Committee
+October 2019 - February 2021
 
-Member, Forensics Faculty Advisory Committee  
+Member, Forensics Faculty Advisory Committee
 February 2019 - March 2020
 
-Member, Decanal Review Committee for Adriene Lim  
-December 2018 - March 2019
-
-Member, Academic Technology Advisory Group  
+Member, Academic Technology Advisory Group
 April 2018 - July 2019
 
-Abstract Reviewer, Undergraduate Research Symposium  
+Abstract Reviewer, Undergraduate Research Symposium
+April 2019
+
+Member, Decanal Review Committee for Adriene Lim
+December 2018 - March 2019
+
+Abstract Reviewer, Undergraduate Research Symposium
 March 2018 - April 2018
 
 *Service to Profession*

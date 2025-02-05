@@ -1,5 +1,24 @@
-{%- for post in site.categories[include.taxonomy] -%}
-  {%- unless post.hidden -%}
-    {% include archive-single.html %}
-  {%- endunless -%}
-{%- endfor -%}
+{% if page.layout == "category" %}
+  {% assign category_posts = site.categories[include.taxonomy] %}
+  {% assign posts_by_year = category_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+  {% for year in posts_by_year %}
+    <h2 class="archive__year">{{ year.name }}</h2>
+    <ul class="archive__list">
+      {% for post in year.items %}
+        {% unless post.hidden %}
+        <li class="archive__item">
+          <a href="{{ post.url }}" class="archive__item-title">{{ post.title }}</a>
+          <div class="archive__item-date">{{ post.date | date: "%B %d, %Y" }}</div>
+        </li>
+        {% endunless %}
+        {% endfor %}
+        </ul>
+        {% endfor %}
+        {% else %}
+        {%- for post in site.categories[include.taxonomy] -%}
+          {%- unless post.hidden -%}
+            {% include archive-single.html %}
+          {%- endunless -%}
+        {%- endfor -%}
+        {% endif %}

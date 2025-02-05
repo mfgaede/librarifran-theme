@@ -1,5 +1,5 @@
 ---
-title: "word games: knotwords & semantle"
+title: "Word Games: Knotwords & Semantle"
 date: 2022-05-01 19:53:08 +0000
 categories: [links]
 

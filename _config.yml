@@ -1,9 +1,9 @@
 theme                    : "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "dark"
+minimal_mistakes_skin    : "contrast"
 locale                   : "en-US"
-title                    : "franny gaede"
+title                    : "Franny Gaede"
 title_separator          : "-"
-subtitle                 : experiments in diy infrastructure
+subtitle                 : 
 name                     : ""
 url                      : https://librarifran.com
 repository               : "mfgaede/librarifran-theme"
@@ -26,12 +26,6 @@ google:
 google_site_verification :
 bing_site_verification   :
 # Social Sharing
-twitter:
-  username               : mfgaede
-facebook:
-  username               : mfgaede
-  app_id                 :
-  publisher              :
 social:
   type                   : Person
 # Analytics
@@ -41,30 +35,10 @@ analytics:
     tracking_id          :
     anonymize_ip         : false # true, false (default)
 author:
-  name             : "franny gaede"
-  avatar           : /assets/img/profile2023.JPG
-  bio              : "she / her. librarian, technologist, gardener, calligrapher."
+  name             : "Franny Gaede"
+  avatar           : /assets/img/profile2024.jpg
+  bio              : "she / her / hers"
   location         : "eugene, or"
-  links:
-    - label: "work"
-      icon: "fas fa-fw fa-briefcase"
-      url: "/categories/#work"
-    - label: "photos"
-      icon: "fas fa-fw fa-camera-retro"
-      url: "/categories/#photos"
-    - label: "links"
-      icon: "fas fa-fw fa-link"
-      url: "/categories/#links"
-    - label: "music"
-      icon: "fas fa-fw fa-music"
-      url: "/categories/#music"
-    - label: "videos"
-      icon: "fas fa-fw fa-video"
-      url: "/categories/#videos"
-    - label: "art"
-      icon: "fas fa-fw fa-paint-brush"
-      url: "/categories/#art"
-
 footer:
   links:
     - label: "email"
@@ -72,13 +46,10 @@ footer:
       url: "mailto:mfgaede@gmail.com"
     - label: "website"
       icon: "fas fa-fw fa-link"
-      url: "https://mfgaede.com"
+      url: "https://www.librarifran.com"
     - label: "mastodon"
       icon: "fab fa-fw fa-mastodon"
       url: "https://hcommons.social/@librarifran"
-    - label: "facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/mfgaede"
     - label: "github"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mfgaede"
@@ -97,6 +68,7 @@ exclude:
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
+  - assets/node_modules
   - Capfile
   - CHANGELOG
   - Gemfile
@@ -132,26 +104,20 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
+  quiet_deps: true
 # Outputting
 pagination:
   enabled: true
-  debug: false
+  paginate_path: '/page:num/'
   collection: 'posts'
-  per_page: 10
-  permalink: '/page/:num/'
+  per_page: 5
   title: ':title - page :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
-  category: 'posts'
-  tag: ''
-  locale: 'en_US' 
-  trail: 
+  trail:
     before: 2
     after: 2
-  extension: html
-  indexpage: 'index'
-  permalink: /page/:num.html
 timezone: America/Los_Angeles
 plugins:
   - jekyll-paginate
@@ -170,15 +136,24 @@ tag_archive:
   path: /tags/
 # Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
       layout: single
       author_profile: true
-      breadcrumbs: true
-      share: true
-      related: true
-    sidebar:
-      nav: "categoryposts"
+      sidebar:
+        nav: "sidebar"
+      comments: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "sidebar"
+      comments: false
+#Comments
+comments:
+  provider: "custom"

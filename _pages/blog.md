@@ -1,10 +1,7 @@
 ---
-title: "blog"
+title: "Blog"
 permalink: /blog/
-layout: home
-pagination: 
-  enabled: true
-author_profile: true
-sidebar:
- nav: "categoryposts"
+layout: posts
+classes: wide
 ---
+[View Posts by Category](/categories){: .btn .btn--info .btn--large} [View Posts by Tag](/tags){: .btn .btn--info .btn--large}

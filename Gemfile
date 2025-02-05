@@ -30,5 +30,6 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem "jekyll-paginate-v2"
   gem "jekyll-pdf-embed"
-  gem "jekyll-liquify", "~> 0.0.2"
+  gem "jekyll-liquify"
+  gem "webrick"
 end

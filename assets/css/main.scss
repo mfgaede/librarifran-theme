@@ -5,6 +5,5 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@use "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}" as skin;
+@use "minimal-mistakes" as mm;
