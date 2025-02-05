@@ -110,7 +110,7 @@ pagination:
   enabled: true
   paginate_path: '/page:num/'
   collection: 'posts'
-  per_page: 5
+  per_page: 15
   title: ':title - page :num'
   limit: 0
   sort_field: 'date'
@@ -127,6 +127,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-liquify
   - jekyll-pdf-embed
+  - jekyll-linkpreview
 #Archives
 category_archive:
   type: liquid
