@@ -1,8 +1,7 @@
-<figure class="code-block" data-language="{{ include.language }}">
-  {% if include.filename %}
-    <figcaption class="file-name">{{ include.filename }}</figcaption>
-  {% endif %}
-  <pre><code class="language-{{ include.language }}">{{ include.content }}</code></pre>
-  <button class="copy-code-button" aria-label="Copy code to clipboard">Copy</button>
-  <span role="alert" class="screen-reader-only"></span>
+<div class="code-header"><figure class="code-block" data-language="{{ include.language }}">
+  <pre tabindex="0"><code class="language-{{ include.language }}">{{ include.content }}</code></pre>
+    <button class="copy-code-button">
+      Copy
+    </button>
 </figure>
+</div>
