@@ -119,12 +119,19 @@ blockquote {
 
 /* links */
 a {
+  font-weight: var(--body-font-weight, 400);
+  text-decoration: none;
+
   &:focus {
     @extend %tab-focus;
   }
 
   &:visited {
     color: $link-color-visited;
+
+  &:hover {
+    text-decoration: underline;
+  }
   }
 
 }
@@ -247,7 +254,7 @@ figure {
 /* figure captions */
 figcaption {
   margin: 0.5em 0;
-  color: $muted-text-color;
+  color: $primary-color;
   font-family: $caption-font-family;
   font-size: $type-size-6;
 
@@ -256,7 +263,6 @@ figcaption {
     transition: $global-transition;
 
     &:hover {
-      color: $link-color-hover;
       text-decoration: underline;
     }
   }
