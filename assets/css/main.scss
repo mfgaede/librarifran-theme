@@ -74,3 +74,34 @@ search: false
         }
     }
 }
+figure.code-block {
+    position: relative;
+    background: #f8f9fa;
+    
+    figcaption.file-name {
+        padding: 0.5em;
+    }
+    
+    pre {
+        margin: 0;
+        padding-right: 4.5em;
+        overflow-x: auto;
+    }
+    
+    .copy-code-button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5em;
+        z-index: 100;
+        padding: 0.25em 0.5em;
+        font-size: 0.75em;
+        background: rgba(255, 255, 255);
+        border: 0.35px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+}

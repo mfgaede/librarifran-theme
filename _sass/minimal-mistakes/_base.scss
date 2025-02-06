@@ -143,9 +143,6 @@ pre {
   font-family: $monospace;
 }
 
-pre {
-  overflow-x: auto; /* add scrollbars to wide code blocks*/
-}
 
 /* horizontal rule */
 hr {
@@ -177,19 +174,37 @@ figure {
   -webkit-box-align: start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin: 0;
+  padding: 0;
 
   img,
   iframe,
   .fluid-width-video-wrapper {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 
   img {
     width: 100%;
+    height: auto;
     border-radius: $border-radius;
     -webkit-transition: $global-transition;
     transition: $global-transition;
+
+    &.align-left {
+      margin-right: 1em;
+      float: left;
+    }
+
+    &.align-right {
+      margin-left: 1em;
+      float: right;
+    }
+
+    &.align-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   > a {
@@ -221,11 +236,17 @@ figure {
       width: 100%;
     }
   }
+
+  &.code-block {
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+  }
 }
 
 /* figure captions */
 figcaption {
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
   color: $muted-text-color;
   font-family: $caption-font-family;
   font-size: $type-size-6;
@@ -236,6 +257,7 @@ figcaption {
 
     &:hover {
       color: $link-color-hover;
+      text-decoration: underline;
     }
   }
 }
@@ -298,4 +320,8 @@ input[type="submit"],
 .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+pre {
+  overflow-x: auto;
 }

@@ -16,14 +16,13 @@ figure.highlight {
     margin: 0;
     padding: 1em;
   }
-}
 
-.highlight table {
-  margin-bottom: 0;
-  font-size: 1em;
-  border: 0;
+  table {
+    margin-bottom: 0;
+    font-size: 1em;
+    border: 0;
 
-  td {
+    td {
     padding: 0;
     width: calc(100% - 1em);
     border: 0;
@@ -319,4 +318,5 @@ figure.highlight {
   th, td {
     border-bottom: 0;
   }
+}
 }
