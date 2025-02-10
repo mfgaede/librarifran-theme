@@ -28,9 +28,9 @@ gem "minimal-mistakes-jekyll"
 group :jekyll_plugins do
   gem "jekyll-data"
   gem 'jekyll-archives'
-end
-gem "jekyll-liquify", "~> 0.0.2"
-
-group :jekyll_plugins do
   gem "jekyll-paginate-v2"
+  gem "jekyll-pdf-embed"
+  gem "jekyll-liquify"
+  gem "webrick"
+  gem "jekyll-linkpreview"
 end

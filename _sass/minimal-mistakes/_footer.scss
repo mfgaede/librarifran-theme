@@ -30,7 +30,7 @@
   }
 
   a {
-    color: inherit;
+    color: #242422;
     text-decoration: none;
 
     &:hover {
@@ -49,6 +49,10 @@
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;
+  color: #000;
+  a {
+    font-weight: 450;
+  }
 }
 
 .page__footer-follow {

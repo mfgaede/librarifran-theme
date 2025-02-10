@@ -1,15 +1,31 @@
 ---
 layout: archive
+entries_layout: grid
 author_profile: true
-pagination: 
-  enabled: true
-sidebar:
- nav: "categoryposts"
 ---
-
+<div id="top"></div>
 {{ content }}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
+{% assign category_name = page.url | split: '/' | last %}
+
+
+<h1 class="page__title">{{ display_name }}</h1>
+
+<div class="grid__wrapper">
+  {% if site.categories[category_name] %}
+    {% assign posts = site.categories[category_name] | sort: 'date' | reverse %}
+    {% assign postsByYear = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    
+    {% for year in postsByYear %}
+      <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
+      <div class="entries-{{ page.entries_layout | default: 'grid' }}">
+        {% for post in year.items %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+      <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
+    {% endfor %}
+  {% else %}
+    <p>No posts found in category "{{ display_name }}".</p>
+  {% endif %}
 </div>

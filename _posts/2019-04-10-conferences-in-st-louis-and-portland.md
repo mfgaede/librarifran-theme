@@ -25,13 +25,13 @@ gallery:
 sustainability for project-based collaborative work: leveraging service level agreements and virtual teams, coalition for networked information spring 2019 membership meeting, april 9, 2019
 
 [presentation page at cni](https://www.cni.org/topics/economic-models/sustainability-for-project-based-collaborative-work-leveraging-service-level-agreements-and-virtual-teams)
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='//www.slideshare.net/slideshow/embed_code/key/J480VYPGqQRMBL' style='border:1px solid #CCC; max-width: 100%;' allowfullscreen> </iframe></div>
+<br />
+{% pdf "/assets/pdf/cni_sustainability.pdf" %}
 
 <h3>what is? information in portland, or.</h3>
 
 social justice and scholarly communication, digital libraries: how new and emerging technologies enhance and reinforce the mission of academic libraries panel, what is technology?, april 12, 2019
 
 [what is technology? conference website](https://blogs.uoregon.edu/whatistechnology/program/)
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='//www.slideshare.net/slideshow/embed_code/key/Fx9fOR6NXD7iSh' style='border:1px solid #CCC; max-width: 100%;' allowfullscreen> </iframe></div>
+<br />
+{% pdf "/assets/pdf/whatis_technology.pdf" %}

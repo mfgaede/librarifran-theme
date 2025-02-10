@@ -1,3 +1,53 @@
-<!-- start custom comments snippet -->
+<div id="page__comments" style="min-height: 100px;">
+    {% if page.bluesky_post_uri %}
+        <div id="loading">Loading comments...</div>
+    {% else %}
+        <div class="notice notice--info" style="padding: 1em; margin: 1em 0">
+            Comments aren't available for older posts. Sorry!
+        </div>
+    {% endif %}
+</div>
 
-<!-- end custom comments snippet -->
+<script type="module">
+    {% if page.bluesky_post_uri %}
+    try {
+        const modules = await Promise.all([
+            import('https://esm.sh/stable/react@18.2.0/es2022/react.mjs'),
+            import('https://esm.sh/stable/react-dom@18.2.0/es2022/react-dom.mjs'),
+            import('https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.es.js')
+        ]);
+        
+        const [React, ReactDOM, BlueskyCommentsModule] = modules;
+        const BlueskyComments = BlueskyCommentsModule.BlueskyComments;
+        const container = document.getElementById('page__comments');
+        const uri = "{{ page.bluesky_post_uri }}";
+        
+        if (container && uri) {
+            const root = ReactDOM.createRoot(container);
+            
+            const EmptyState = () => {
+                console.log('Rendering empty state');
+                return React.createElement('div', {
+                    className: 'notice notice--info',
+                    style: { padding: '1em', margin: '1em 0' }
+                }, 'Be the first to comment on this post!');
+            };
+            
+            const element = React.createElement(BlueskyComments, {
+                uri,
+                author: "librarifran.bsky.social",
+                showLogin: true,
+                onLoad: () => document.getElementById('loading')?.remove(),
+                onEmpty: EmptyState
+            });
+            
+            root.render(element);
+            console.log('BlueskyComments mounted with URI:', uri);
+        }
+    } catch (error) {
+        console.error('Error loading comments:', error);
+        document.getElementById('page__comments').innerHTML = 
+            `<div class="notice notice--danger" style="padding: 1em; margin: 1em 0">Unable to load comments. Please try again later.</div>`;
+    }
+    {% endif %}
+</script>

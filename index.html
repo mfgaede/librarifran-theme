@@ -1,21 +1,17 @@
 ---
-layout: single
+layout: home
 author_profile: true
-sidebar:
- nav: "categoryposts"
-tagline: "an oregon librarian's experiments in technology and writing on a variety of topics professional and personal"
-header:
-  overlay_image: assets/img/florencia_banner.jpg
-  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
-  caption: "photo: [florencia viadana via unsplash](https://unsplash.com/photos/jReenm8gCXs)"
+sidebar: 
+  nav: "sidebar"
+pagination:
+  enabled: true
 classes: wide
 ---
-
-<h3>recent posts</h3>
-<div>
-  <div class="grid__wrapper">
-  {% for post in site.posts limit:4 %}
+<p>I play yellow in board games and adore echinacea flowers in my garden. I spend a lot (<strong>a lot</strong>) of time cross-stitching, although all my finished pieces are rolled up in a cabinet. My wardrobe straddles the line between corporate-goth and lobster-print-pants and my go-to host gift is Dr. Pepper. I have a strong aversion to being late... which is ironic, since I usually am. My Wordle start word is "CRANE."</p>
+<p>According to CliftonStrengths, I lead with Influencing: Positivity, Input, Woo, Activator, and Maximizer. I adore connecting with others and learning from them, almost as much as I love the nap I have to take after a long day of socializing. I have rebuilt this website in four static site builders but it's [still in / returned to] Jekyll. This is either a compliment to Jekyll or a testament to my interest in tinkering with things that are already working.</p>
+<h3>Recent Posts</h3>
+<div class="grid__wrapper">
+  {% for post in site.posts limit:3 %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
-</div>
 </div>

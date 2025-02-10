@@ -1,33 +1,52 @@
 ---
 layout: archive
-author_profile: true
+entries_layout: grid
 ---
 
-<a href="/categories/" class="btn btn--primary">view by category</a>   <a href="/tags/" class="btn btn--primary">view by tag</a>
+<script src="{{ '/assets/js/posts-nav.js' | relative_url }}"></script>
 
 {{ content }}
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="taxonomy__wrapper">
+  <div class="archive__nav">
+    <button class="nav__item active" data-view="year">By Year</button>
+    <button class="nav__item" data-view="category">By Category</button>
+    <button class="nav__item" data-view="tag">By Tag</button>
+  </div>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %}
-  <section id="{{ year.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ year.name }}</h2>
-    <div class="entries-{{ entries_layout }}">
-      {% for post in year.items %}
-        {% include archive-single.html type=entries_layout %}
-      {% endfor %}
-    </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-  </section>
-{% endfor %}
+  <div class="taxonomy__index active" id="year-view">
+    {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+    {% for year in postsInYear %}
+      <div class="year-link">
+        <a href="/posts/{{ year.name }}/">
+          <h2>{{ year.name }}</h2>
+          <span class="taxonomy__count">{{ year.items | size }} posts</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="taxonomy__index hidden" id="category-view">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      <div class="category-link">
+        <a href="/categories/{{ category[0] | slugify }}/">
+          <h2>{{ category[0] }}</h2>
+          <span class="taxonomy__count">{{ category[1].size }} posts</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="taxonomy__index hidden" id="tag-view">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <div class="tag-link">
+        <a href="/tags/{{ tag[0] | slugify }}/">
+          <h2>{{ tag[0] }}</h2>
+          <span class="taxonomy__count">{{ tag[1].size }} posts</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

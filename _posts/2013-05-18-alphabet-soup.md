@@ -11,4 +11,4 @@ categories: [work]
 
 capstone project supervised by amy rushing, now assistant dean for special collections at the university of san antonio, to develop metadata guidelines for still images for the university of texas at austin libraries.
 
-<object data="/assets/pdf/stillimagemetadata.pdf" type="application/pdf"></object>
+ {% pdf "/assets/pdf/stillimagemetadata.pdf" %}

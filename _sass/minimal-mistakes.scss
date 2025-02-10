@@ -29,7 +29,7 @@
 @import "minimal-mistakes/footer";
 @import "minimal-mistakes/search";
 @import "minimal-mistakes/syntax";
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
 
 /* Utility classes */
 @import "minimal-mistakes/utilities";
@@ -39,3 +39,5 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+@import "minimal-mistakes/custom";

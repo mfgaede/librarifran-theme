@@ -1,11 +1,28 @@
 ---
 layout: archive
+entries_layout: grid
 author_profile: true
 ---
 
 {{ content }}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include posts-tag.html taxonomy=page.taxonomy type=entries_layout %}
+{% assign tag_name = page.url | split: '/' | last %}
+<div id="top"></div>
+<div class="grid__wrapper">
+  {% if site.tags[tag_name] %}
+    {% assign posts = site.tags[tag_name] | sort: 'date' | reverse %}
+    {% assign postsByYear = posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+    
+    {% for year in postsByYear %}
+      <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
+      <div class="entries-{{ page.entries_layout | default: 'grid' }}">
+        {% for post in year.items %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+      <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
+    {% endfor %}
+  {% else %}
+    <p>No posts found with tag "{{ tag_name }}".</p>
+  {% endif %}
 </div>

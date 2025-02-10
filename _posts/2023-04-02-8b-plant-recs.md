@@ -1,5 +1,5 @@
 ---
-title: "8b plant recs"
+title: "8b Plant Recs"
 date: 2023-03-30 11:10 AM
 classes: wide
 categories: [posts]

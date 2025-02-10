@@ -1,10 +1,7 @@
 ---
-title: "blog"
+title: "Archive"
 permalink: /blog/
-layout: home
-pagination: 
-  enabled: true
+layout: posts
+entries_layout: grid
 author_profile: true
-sidebar:
- nav: "categoryposts"
 ---

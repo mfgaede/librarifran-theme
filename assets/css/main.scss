@@ -5,6 +5,169 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@use "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}" as skin;
+@use "minimal-mistakes" as mm;
+
+.jekyll-linkpreview-wrapper {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    .jekyll-linkpreview-image {
+        width: 100%;  // Full width for preview images
+        order: -1;
+        aspect-ratio: 16/9;  // Standard preview ratio
+        margin: 0;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding: 1.5rem;
+            
+            &:not([src]), &[src=""],
+            &:not([src*="."]), &[src*="data:"],
+            &.error, &[src$="#error"] {
+                display: none;
+                & + .jekyll-linkpreview-image {
+                    width: 25%;  // Smaller width for fallback
+                    aspect-ratio: 1;  // Square for fallback
+                    margin: 1em auto;
+                    background: #f5f5f5 url('/assets/img/fave.png') center/contain no-repeat;
+                }
+            }
+        }
+    }
+    
+    .jekyll-linkpreview-content {
+        display: flex;
+        flex-direction: column;
+        min-height: 150px;
+    }
+    
+    .jekyll-linkpreview-body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .jekyll-linkpreview-title {
+        margin-top: 0;
+    }
+
+    .jekyll-linkpreview-description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: #333;
+        flex: 1;
+    }
+    
+    .jekyll-linkpreview-footer {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #666;
+        padding: 1rem;
+        a {
+            color: #6c6c66;
+        }
+    }
+}
+figure.code-block {
+    position: relative;
+    background: #f8f9fa;
+    
+    figcaption.file-name {
+        padding: 0.5em;
+    }
+    
+    pre {
+        margin: 0;
+        padding-right: 4.5em;
+        overflow-x: auto;
+    }
+    
+    .copy-code-button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5em;
+        z-index: 100;
+        padding: 0.25em 0.5em;
+        font-size: 0.75em;
+        background: rgba(255, 255, 255);
+        border: 0.35px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+    }
+}
+.taxonomy__wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+  
+.archive__nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 2em;
+    
+    .nav__item {
+        padding: 0.5em 1em;
+        border: 1px solid #f2f3f3;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        
+        &:hover {
+            background: #fff;
+        }
+        
+        &.active {
+            background: #ff6105;
+            color: #fff;
+            border-color: #ff6105;
+        }
+    }
+}
+  
+.taxonomy__index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: .5rem;
+    
+    &.hidden {
+        display: none;
+    }
+
+    .year-link, .category-link, .tag-link {
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            border: 1px solid #f2f3f3;
+            border-radius: 4px;
+            text-decoration: none;
+            color: inherit;
+            
+            h2 {
+                margin: 0;
+            }
+            
+            .taxonomy__count {
+                color: #666;
+            }
+            
+            &:hover {
+                background: #fff;
+                transform: translateY(-2px);
+                transition: all 0.2s ease;
+            }
+        }
+    }
+}

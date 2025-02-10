@@ -1,5 +1,5 @@
 ---
-title: "sibling reunion in portland"
+title: "Sibling Reunion in Portland"
 date: 2022-05-31 08:00:00 +0000
 categories: [photos]
 gallery:

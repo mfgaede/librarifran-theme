@@ -1,0 +1,12 @@
+.custom-bluesky {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../img/icons/bluesky.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}

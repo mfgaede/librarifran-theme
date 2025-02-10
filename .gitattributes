@@ -1,10 +1,58 @@
+# Vendor directories
 assets/fonts/*                  linguist-vendored
 assets/js/main.min.js           linguist-vendored
 assets/js/lunr/*                linguist-vendored
 assets/js/plugins/*             linguist-vendored
 assets/js/vendor/*              linguist-vendored
 _sass/minimal-mistakes/vendor/* linguist-vendored
+
+# Documentation
 CHANGELOG.md                    text merge=union
 docs/_docs/18-history.md        text merge=union
 
-*.md                            text
+# Text files
+*.md                            text diff=markdown
+*.txt                           text
+*.html                          text diff=html
+*.css                           text diff=css
+*.scss                          text diff=css
+*.js                            text
+*.json                          text
+*.yml                           text
+*.yaml                          text
+*.xml                           text
+*.svg                           text
+
+# Binary files
+*.png                           binary
+*.jpg                           binary
+*.gif                           binary
+*.ico                           binary
+*.gz                            binary
+*.zip                           binary
+*.7z                            binary
+*.ttf                           binary
+*.eot                           binary
+*.woff                          binary
+*.woff2                         binary
+*.pdf                           binary
+
+# Scripts
+*.sh                            text eol=lf
+*.bash                          text eol=lf
+*.fish                          text eol=lf
+*.zsh                           text eol=lf
+
+# Git Config
+.gitattributes                  text
+.gitignore                      text
+.gitconfig                      text
+
+# Ruby files
+*.rb                            text diff=ruby
+*.rake                          text diff=ruby
+Gemfile                         text diff=ruby
+Rakefile                        text diff=ruby
+
+# Ensure line endings are normalized
+* text=auto eol=lf
