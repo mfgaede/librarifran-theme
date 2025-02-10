@@ -917,6 +917,12 @@ var store = [{
         "url": "/posts/2024/07/10/remembering-sue.html",
         "teaser": null
       },{
+        "title": "Fourteen Years",
+        "excerpt":"     Today is the fourteenth anniversary of the day we got married 💜 We’re not all about The Day, given the vagaries of modern life and scheduling — what is time, anyway ⏰ 😵‍💫?   Kyle’s mom gifted us a custom pair of champagne flutes etched with the date. We have to crack them out around this time every year to figure out if it’s the 30th or the 31st and how many years it’s been. Sue thought this was very funny and said she was glad they were useful. Thinking of her today.   Pictures here from Arizona (taken by my mom), Texas (taken by Kyle’s mom), Indiana, and Oregon eras.  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2024/07/30/fourteen.html",
+        "teaser": null
+      },{
         "title": "Thirty-Seven",
         "excerpt":"This year I…                                                                                                                                                                                                                                                                                                                                                                                                                                             ","categories": ["photos"],
         "tags": [],
@@ -942,7 +948,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Mother Cares Naught for Us",
-        "excerpt":"     Lads, attempting to will dinner into existence   ","categories": ["photos"],
+        "excerpt":"     Lads, attempting to will dinner into existence  ","categories": ["photos"],
         "tags": [],
         "url": "/photos/2024/09/19/mother.html",
         "teaser": null
