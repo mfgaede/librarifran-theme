@@ -749,6 +749,12 @@ var store = [{
         "url": "/work/2019/04/12/conferences-in-st-louis-and-portland.html",
         "teaser": null
       },{
+        "title": "In the History of Ever",
+        "excerpt":"     This was too much to keep to myself.  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2019/05/14/too-much.html",
+        "teaser": null
+      },{
         "title": "supporting open access and other “open” movements",
         "excerpt":"   View PDF         invited talk for the orbis cascade summer meeting  ","categories": ["work"],
         "tags": ["presentations"],
@@ -795,6 +801,12 @@ var store = [{
         "excerpt":"                View PDF         peer-reviewed presentation \"virtually united: bringing disparate museum and library collections together in digital exhibitions\" for the association for asian studies annual conference  ","categories": ["work"],
         "tags": ["presentations"],
         "url": "/work/2021/03/23/virtually-united.html",
+        "teaser": null
+      },{
+        "title": "This Owl",
+        "excerpt":"     This owl. Forever this owl.  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2021/06/08/this-owl.html",
         "teaser": null
       },{
         "title": "The Magic of GoodNotes Color-Changing Stickers",
@@ -899,6 +911,18 @@ var store = [{
         "url": "/posts/2023/03/30/8b-plant-recs.html",
         "teaser": null
       },{
+        "title": "Vital Supplies",
+        "excerpt":"     Vital supplies for spring in the Willamette Valley  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2024/03/29/allergies.html",
+        "teaser": null
+      },{
+        "title": "#nofilter",
+        "excerpt":"     I had to pull over for this sky. It was absolutely glorious and not a filter to be found.  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2024/04/13/nofilter.html",
+        "teaser": null
+      },{
         "title": "Starlight Stitchery Popup",
         "excerpt":"     My haul from Saturday’s pop-up shop by Starlight Stitchery — pattern by Darling and Whimsy Designs, needle minder by Kiriki Press, sticker by Spot Colors. Foxglove and Crow had the most amazing unicorn dress and I will dream about the berry mocha from Imagine Coffee. Best Saturday or BEST SATURDAY?  ","categories": ["photos","art"],
         "tags": ["cross-stitch"],
@@ -915,6 +939,12 @@ var store = [{
         "excerpt":"     Mother-in-law is a phrase that evokes a feeling, I think, for young women of a certain age. Existential dread, maybe, mortal terror, perhaps. A negative connotation that I always feel the need to preemptively quash. I have to forestall any misunderstanding of this relationship that has been so precious to me and foundational to my transition to adulthood (insofar as such a thing can be said to have taken place) and my development of a sense of self.   Sue Hollingshead was unlike any woman I had and have met. She was fiercely intelligent, incredibly competent, independent, good-humored, generous, patient. She had a family, a career, a chronic illness… the magazines never even talked about that last part when they talked about having it all. But that had been such a big part of my life experience growing up, and it didn’t define hers or her family’s.   And it wasn’t so much that she was kind or thoughtful — because she was both, enormously so. But she was responsible. Not a righteous or boring responsibility but one borne of love, care, duty to family and loved ones — so rare it sounds like something out of fiction or epic poetry.   I feel so lucky to have known her and to have learned from her. My heart hurts to think of years ahead without her. I miss her good advice, her impeccable timing, her encouragement, and mostly, I just miss her.     Sue, I’ll keep after that tall, tall boy of yours. That new kidney is doing a great job so far and I promise we’ll make the most of it.   Thank you for everything. I love you always.     More memories of Sue  ","categories": ["posts"],
         "tags": [],
         "url": "/posts/2024/07/10/remembering-sue.html",
+        "teaser": null
+      },{
+        "title": "Vending Machine",
+        "excerpt":"     Yes, hello, I would like a new timeline  ","categories": ["photos"],
+        "tags": [],
+        "url": "/photos/2024/07/24/vending-machine.html",
         "teaser": null
       },{
         "title": "Fourteen Years",
@@ -1175,6 +1205,9 @@ var store = [{
     "title": "Franny Gaede - page 11",
     "excerpt":"I play yellow in board games and adore echinacea flowers in my garden. I spend a lot (a lot) of time cross-stitching, although all my finished pieces are rolled up in a cabinet. My wardrobe straddles the line between corporate-goth and lobster-print-pants and my go-to host gift is Dr. Pepper. I have a strong aversion to being late... which is ironic, since I usually am. My Wordle start word is \"CRANE.\"  According to CliftonStrengths, I lead with Influencing: Positivity, Input, Woo, Activator, and Maximizer. I adore connecting with others and learning from them, almost as much as I love the nap I have to take after a long day of socializing. I have rebuilt this website in four static site builders but it's [still in / returned to] Jekyll. This is either a compliment to Jekyll or a testament to my interest in tinkering with things that are already working.  Recent Posts     {% for post in site.posts limit:3 %}     {% include archive-single.html type=\"grid\" %}   {% endfor %}  ","url": "https://librarifran.com/page11/index.html"
   },{
+    "title": "Franny Gaede - page 12",
+    "excerpt":"I play yellow in board games and adore echinacea flowers in my garden. I spend a lot (a lot) of time cross-stitching, although all my finished pieces are rolled up in a cabinet. My wardrobe straddles the line between corporate-goth and lobster-print-pants and my go-to host gift is Dr. Pepper. I have a strong aversion to being late... which is ironic, since I usually am. My Wordle start word is \"CRANE.\"  According to CliftonStrengths, I lead with Influencing: Positivity, Input, Woo, Activator, and Maximizer. I adore connecting with others and learning from them, almost as much as I love the nap I have to take after a long day of socializing. I have rebuilt this website in four static site builders but it's [still in / returned to] Jekyll. This is either a compliment to Jekyll or a testament to my interest in tinkering with things that are already working.  Recent Posts     {% for post in site.posts limit:3 %}     {% include archive-single.html type=\"grid\" %}   {% endfor %}  ","url": "https://librarifran.com/page12/index.html"
+  },{
     "title": "posts by month",
     "excerpt":"","url": "https://librarifran.com/month-archive/index.html"
   },{
@@ -1207,6 +1240,9 @@ var store = [{
   },{
     "title": "posts by month - page 11",
     "excerpt":"","url": "https://librarifran.com/month-archive/page11/index.html"
+  },{
+    "title": "posts by month - page 12",
+    "excerpt":"","url": "https://librarifran.com/month-archive/page12/index.html"
   },{
     "title": null,
     "excerpt":" {% if page.xsl %} {% endif %} {% assign collections = site.collections | where_exp:'collection','collection.output != false' %}{% for collection in collections %}{% assign docs = collection.docs | where_exp:'doc','doc.sitemap != false' %}{% for doc in docs %} {{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }} {% if doc.last_modified_at or doc.date %}{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }} {% endif %} {% endfor %}{% endfor %}{% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != \"/404.html\"' %}{% for page in pages %} {{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }} {% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }} {% endif %} {% endfor %}{% assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != \"404.html\"' %}{% for file in static_files %} {{ file.path | replace:'/index.html','/' | absolute_url | xml_escape }} {{ file.modified_time | date_to_xmlschema }}  {% endfor %} ","url": "https://librarifran.com/sitemap.xml"
