@@ -1,5 +1,5 @@
 ---
-title: "Blog Archive"
+title: "Archive"
 permalink: /blog/
 layout: posts
 entries_layout: grid
