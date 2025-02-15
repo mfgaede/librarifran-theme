@@ -3,7 +3,7 @@ title: "BlueSky Comments as a Minimal Mistakes Custom Comment Provider for Jekyl
 date: 2025-02-05 09:00 AM
 classes: single
 categories: [posts]
-bluesky_post_uri: "https://bsky.app/profile/librarifran.bsky.social/post/3lhifudavc22e"
+bluesky_post_uri: "https://bsky.app/profile/librarifran.com/post/3lhifudavc22e"
 ---
 
 I've wanted a comments system for several years, but Discus has way too many privacy issues and I had a knee-jerk "not GitHub!" to utteranc.es and its ilk.  

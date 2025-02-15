@@ -60,7 +60,7 @@ footer:
       url: "mailto:mfgaede@gmail.com"
     - label: "Bluesky"
       icon: "custom-bluesky"
-      url: "https://bsky.app/profile/librarifran.bsky.social"
+      url: "https://bsky.app/profile/librarifran.com"
     - label: "Mastodon"
       icon: "fa-brands fa-mastodon"
       url: "https://hcommons.social/@librarifran"
