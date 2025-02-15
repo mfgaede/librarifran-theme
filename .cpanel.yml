@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html
+    - export DEPLOYPATH=/home/librarif/public_html
     - export SITEPATH=_site
     - /bin/rm -rf $DEPLOYPATH/*
     - /bin/cp -R $SITEPATH/* $DEPLOYPATH/
