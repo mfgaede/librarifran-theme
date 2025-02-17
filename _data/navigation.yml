@@ -9,21 +9,3 @@ main:
   url: /now/
 - title: "CV"
   url: /cv/
-
-sidebar: 
-- title: Blog
-  children: 
-    - title: "💻 Posts"
-      url: categories/posts/
-    - title: "💼 Work"
-      url: categories/work/
-    - title: "📷 Photos"
-      url: categories/photos/
-    - title: "🔗 Links"
-      url: categories/links/
-    - title: "🎵 Music"
-      url: categories/music/
-    - title: "📽️ Videos"
-      url: categories/videos/
-    - title: "🎨 Art"
-      url: categories/art/

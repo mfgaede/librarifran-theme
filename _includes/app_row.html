@@ -1,0 +1,90 @@
+{% if include.id %}
+  {% assign app_row = page[include.id] %}
+{% else %}
+  {% assign app_row = page.app_row %}
+{% endif %}
+
+<div class="app__wrapper">
+  {% for app in app_row %}
+    <div class="app__container">
+      <div class="app__item">
+        {% if app.category %}
+          <div class="app__category-header">
+            {% case app.category %}
+              {% when 'Email' %}
+                <i class="fas fa-envelope"></i> {{ app.category }}
+              {% when 'Notes' %}
+                <i class="fas fa-sticky-note"></i> {{ app.category }}
+              {% when 'To-Do' %}
+                <i class="fas fa-check-square"></i> {{ app.category }}
+              {% when 'Photo Shooting' %}
+                <i class="fas fa-camera"></i> {{ app.category }}
+              {% when 'Photo Management' %}
+                <i class="fas fa-images"></i> {{ app.category }}
+              {% when 'Calendar' %}
+                <i class="fas fa-calendar-alt"></i> {{ app.category }}
+              {% when 'Cloud File Storage' %}
+                <i class="fas fa-cloud"></i> {{ app.category }}
+              {% when 'RSS' %}
+                <i class="fas fa-rss"></i> {{ app.category }}
+              {% when 'Contacts' %}
+                <i class="fas fa-address-book"></i> {{ app.category }}
+              {% when 'Browser' %}
+                <i class="fas fa-globe"></i> {{ app.category }}
+              {% when 'Chat' %}
+                <i class="fas fa-comments"></i> {{ app.category }}
+              {% when 'Bookmarks' %}
+                <i class="fas fa-bookmark"></i> {{ app.category }}
+              {% when 'Word Processing' %}
+                <i class="fas fa-file-word"></i> {{ app.category }}
+              {% when 'Spreadsheets' %}
+                <i class="fas fa-file-excel"></i> {{ app.category }}
+              {% when 'Presentations' %}
+                <i class="fas fa-person-chalkboard"></i> {{ app.category }}
+              {% when 'Shopping Lists' %}
+                <i class="fas fa-list-alt"></i> {{ app.category }}
+              {% when 'Budgeting and Personal Finance' %}
+                <i class="fas fa-money-bill-alt"></i> {{ app.category }}
+              {% when 'News' %}
+                <i class="fas fa-newspaper"></i> {{ app.category }}
+              {% when 'Music' %}
+                <i class="fas fa-music"></i> {{ app.category }}
+              {% when 'Password Management' %}
+                <i class="fas fa-key"></i> {{ app.category }}
+              {% else %}
+                {{ app.category }}
+            {% endcase %}
+          </div>
+        {% endif %}
+
+        {% if app.image_path %}
+          <div class="archive__item-teaser">
+            <img src="{{ app.image_path | relative_url }}" alt="{{ app.name }}">
+          </div>
+        {% endif %}
+
+        <div class="archive__item-body">
+          {% if app.name %}
+            <h2 class="archive__item-title">{{ app.name }}</h2>
+          {% endif %}
+
+          {% if app.app_store_url or app.developer_url %}
+            <div class="app__buttons">
+              {% if app.app_store_url %}
+                <button onclick="window.location.href='{{ app.app_store_url }}'" class="btn">
+                  <i class="fa-brands fa-app-store-ios"></i>
+                </button>
+              {% endif %}
+
+              {% if app.developer_url %}
+                <button onclick="window.location.href='{{ app.developer_url }}'" class="btn">
+                  <i class="fas fa-store"></i>
+                </button>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

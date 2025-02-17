@@ -42,7 +42,7 @@
   .fab,
   .far,
   .fal {
-    color: $muted-text-color;
+    color: $primary-color;
   }
 }
 
@@ -81,8 +81,12 @@
   }
 
   .social-icons {
+    color: $primary-color;
     a {
       white-space: nowrap;
     }
+  .custom-bluesky {
+    fill: $primary-color;
+  }
   }
 }

@@ -4,9 +4,103 @@
     display: inline-block;
     width: 1em;
     height: 1em;
+    color: #ff6105;
     background-image: url('../img/icons/bluesky.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
+}
+.app__wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Re-enable flex-wrap */
+  justify-content: flex-start;
+}
+
+.app__container {
+  display: flex; /* Re-introduce flexbox */
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app__item {
+  text-align: center;
+  border: 1px solid $border-color; /* Add border */
+  border-radius: 3px; /* Add rounded corners */
+  padding: 0.6rem; /* Add padding to all sides */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); /* Add shadow */
+  box-sizing: border-box; /* Include padding and border in the width */
+  /* flex-grow: 1; /* Allow the item to take up available space */
+  display: flex; /* Add flexbox layout */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items horizontally */
+  width: 8rem;
+}
+
+.app__category-header {
+  font-size: 0.7em;
+  font-weight: 400;
+  margin-bottom: 0.3em;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+.archive__item-teaser {
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+  img {
+    width: 60px; /* Adjust as needed */
+    height: 60px;
+    border-radius: 12px; /* Optional: Add rounded corners */
+    object-fit: cover; /* Ensure images fill the space */
+    margin-bottom: 0.3em; /* Add spacing below image */
+    margin-top: 0.3em; /* Add spacing above image */
+  }
+}
+
+.archive__item-title {
+  font-size: 0.8em; /* Reduced font size */
+  font-weight: normal; /* Removed bold */
+  margin-top: 0.15em; /* Reduced top margin */
+  margin-bottom: 0.06em; /* Reduced bottom spacing */
+  color: lighten($text-color, 20%); /* Lighter color */
+}
+
+.btn {
+  justify-content: center; /* Horizontally align icon and text */
+  margin-top: 0.3em;
+  padding: 0.3em 0.6em;
+  background-color: #fff; /* Set background color to white */
+  color: $primary-color; /* Set text color to orange */
+  border-radius: 3px; /* Add rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+  cursor: pointer; /* Add pointer cursor */
+
+  &:hover {
+    background-color: $primary-color; /* Set background color to orange on hover */
+    color: #fff; /* Set text color to white on hover */
+  }
+
+  &:only-child {
+    border: none; /* Remove border when only an icon is present */
+    padding: 0.3em; /* Adjust padding for icon-only button */
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .app__category,
+  .app__usage-tag {
+    font-size: 0.7em; /* Increase font size for larger screens */
+  }
+}
+
+.fa-app-store-ios,
+.fa-store {
+  font-size: 1.4em;
+}
+
+.archive__item-body {
+  text-align: center; /* Center the content */
 }

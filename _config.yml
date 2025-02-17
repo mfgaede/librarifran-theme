@@ -51,6 +51,28 @@ author:
   avatar: "/assets/img/profile2024.jpg"
   bio: "she / her / hers"
   location: "eugene, or"
+  links:
+    - label: "Posts"
+      icon: "fa-solid fa-newspaper"
+      url: "/categories/posts"
+    - label: "Work"
+      icon: "fa-solid fa-briefcase"
+      url: "/categories/work"
+    - label: "Photos"
+      icon: "fa-solid fa-camera"
+      url: "/categories/photos"
+    - label: "Links"
+      icon: "fa-solid fa-link"
+      url: "/categories/links"
+    - label: "Music"
+      icon: "fa-solid fa-music"
+      url: "/categories/music"
+    - label: "Videos"
+      icon: "fa-solid fa-video"
+      url: "/categories/videos"
+    - label: "Art"
+      icon: "fa-solid fa-palette"
+      url: "/categories/art"
 
 # Footer Settings
 footer:
@@ -189,8 +211,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "sidebar"
       comments: true
   - scope:
       path: ""
@@ -198,8 +218,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      sidebar:
-        nav: "sidebar"
       comments: false
 
 # Comment Settings
