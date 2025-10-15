@@ -1,6 +1,7 @@
 ---
-title: "trip to montana"
+title: "Trip to Montana"
 date: 2018-07-15 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/37066150_10155265236466261_8087850252217876480_n_10155265236456261.jpg
@@ -8,4 +9,3 @@ gallery:
    - url: /assets/img/38119970_10155300667506261_8931417778028544000_n_10155300667501261.jpg
      image_path: /assets/img/thumbs/38119970_10155300667506261_8931417778028544000_n_10155300667501261.png
 ---
-{% include gallery id="gallery" class="full" %}

@@ -1,14 +1,12 @@
 ---
-title: "alphabet soup"
+title: "Alphabet Soup"
 date: 2013-05-18
 categories: [work]
 ---
-<figure>
-	<a href="/assets/img/capstoneposter.jpg"><img src="/assets/img/capstoneposter.jpg" class="full"></a>
-</figure>
+<a href="/assets/img/capstoneposter.jpg"><img src="/assets/img/capstoneposter.jpg" class="full" alt="Alphabet Soup: METS, MODS, and Metadata Guidelines for Still Images"></a>
 
-### alphabet soup: mets, mods, and metadata guidelines for still images
+### Alphabet Soup: METS, MODS, and Metadata Guidelines for Still Images
 
-capstone project supervised by amy rushing, now assistant dean for special collections at the university of san antonio, to develop metadata guidelines for still images for the university of texas at austin libraries.
+Capstone project supervised by Amy Rushing, now Assistant Dean for Special Collections at the University of San Antonio, to develop metadata guidelines for still images for the University of Texas at Austin Libraries.
 
  {% pdf "/assets/pdf/stillimagemetadata.pdf" %}

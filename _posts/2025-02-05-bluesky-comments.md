@@ -10,9 +10,10 @@ I've wanted a comments system for several years, but Discus has way too many pri
 
 Last night, I found [Cory Zoe's 5 minute guide to adding BlueSky-powered comments to any website.](https://www.coryzue.com/writing/bluesky-comments/) It, er, took me significantly longer than five minutes to implement, but it is looking and functioning the way I want it to and I think I understand it well enough to be able to explain it to those like me who couldn't dream of doing this from scratch, but know enough to want to implement it and break it terribly and repeatedly.  
 
-First step is to install the library: 
+First step is to install the library:
 
 {% include codeHeader.html %}
+
 ~~~console
     npm install bluesky-comments
 ~~~
@@ -22,6 +23,7 @@ I moved the folder (node_modules) into the assets folder, so now I have my_folde
 In my _config.yml file, I turned on comments for posts:
 
 {% include codeHeader.html %}
+
 ~~~yaml
     defaults:
         - scope:
@@ -35,6 +37,7 @@ In my _config.yml file, I turned on comments for posts:
 And I set my comments provider to "custom"
 
 {% include codeHeader.html %}
+
 ~~~yaml
     comments:
         provider: "custom"
@@ -45,6 +48,7 @@ In the _layouts/single.html from Minimal Mistakes, comments are located on lines
 Comments are disabled on test servers by Minimal Mistakes, so I removed that bit. If you want to re-enable it, you'll want to wrap the `<div>` in
 
 {% include codeHeader.html %}
+
 ~~~liquid
     {% raw %}{% if page.comments %}
         <div class="page__comments">
@@ -56,6 +60,7 @@ Comments are disabled on test servers by Minimal Mistakes, so I removed that bit
 I added the CSS to _includes/head/custom.html:
 
 {% include codeHeader.html %}
+
 ~~~html
     <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.css">
 ~~~
@@ -67,6 +72,7 @@ I used Cory Zoe's code as a base and used Claude in Copilot to develop _includes
 For comments to show up, you need to include
 
 {% include codeHeader.html %}
+
 ~~~yaml
     bluesky_post_uri: "https://bsky.app/profile/YOUR.USERNAME.HERE.bsky.social/post/POSTIDHERE"
 ~~~

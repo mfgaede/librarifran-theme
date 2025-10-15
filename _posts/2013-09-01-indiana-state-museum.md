@@ -1,6 +1,7 @@
 ---
-title: "star wars: where science meets imagination"
+title: "Star Wars: Where Science Meets Imagination"
 date: 2013-09-01 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
     - url: /assets/img/e8577b2fb7.jpg
@@ -18,4 +19,3 @@ gallery:
     - url: /assets/img/787ab1f86d.jpg
       image_path: /assets/img/thumbs/787ab1f86d.png
 ---
-{% include gallery id="gallery" class="full" %}

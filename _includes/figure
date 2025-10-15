@@ -1,8 +1,27 @@
-<figure class="{{ include.class }}">
-  <img src="{{ include.image_path | relative_url }}"
-       alt="{% if include.alt %}{{ include.alt }}{% endif %}">
+{%- assign allowed_sizes = "small,medium,large" | split: ',' -%}
+{%- assign size = include.size | default: 'small' -%}
+{%- unless allowed_sizes contains size -%}
+  {%- assign size = 'small' -%}
+{%- endunless -%}
+
+{%- assign allowed_aligns = "left,center,right" | split: ',' -%}
+{%- assign align = include.align | default: 'center' -%}
+{%- unless allowed_aligns contains align -%}
+  {%- assign align = 'center' -%}
+{%- endunless -%}
+
+{%- assign img_class = include.img_class | default: '' -%}
+{%- assign caption_class = include.caption_class | default: '' -%}
+
+<figure class="{{ include.class }} figure--{{ size }} align-{{ align }}">
+  {% assign popup_href = include.url | default: include.image_path %}
+  <a href="{{ popup_href | relative_url }}" {% if include.title %}title="{{ include.title }}"{% elsif include.alt %}title="{{ include.alt }}"{% endif %}>
+    <img src="{{ include.image_path | relative_url }}"
+         alt="{% if include.alt %}{{ include.alt }}{% endif %}"
+         {% if img_class != '' %}class="{{ img_class }}"{% endif %}>
+  </a>
   {%- if include.caption -%}
-    <figcaption>
+    <figcaption {% if caption_class != '' %}class="{{ caption_class }}"{% endif %}>
       {{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}
     </figcaption>
   {%- endif -%}

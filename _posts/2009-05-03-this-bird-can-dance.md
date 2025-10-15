@@ -1,6 +1,7 @@
 ---
-title: "this bird can dance"
+title: "This Bird Can Dance"
 date: 2009-05-03 08:00:00 +0000
+layout: video
 categories: [videos]
+youtube_id: "utkb1nOJnD4"
 ---
-{% include video id="utkb1nOJnD4" provider="youtube" %}

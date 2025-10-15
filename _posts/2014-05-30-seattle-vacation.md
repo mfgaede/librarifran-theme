@@ -1,6 +1,7 @@
 ---
-title: "seattle vacation"
+title: "Seattle Vacation"
 date: 2014-05-30 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/1907631_10152022767296261_197802361169957572_n_10152022767296261.jpg
@@ -24,4 +25,3 @@ gallery:
    - url: /assets/img/10411312_10152023839176261_2363104654222416993_n_10152023839176261.jpg
      image_path: /assets/img/thumbs/10411312_10152023839176261_2363104654222416993_n_10152023839176261.png
 ---
-{% include gallery id="gallery" class="full" %}

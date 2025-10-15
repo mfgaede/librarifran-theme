@@ -3,6 +3,7 @@ title: "The Magic of GoodNotes Color-Changing Stickers"
 date: 2021-07-05 09:00 AM
 classes: single
 categories: [posts]
+tags: [planning]
 ---
 
 I began drafting this post in my first digital planner, which I purchased after working with GoodNotes for several years and window shopping for said digital planner for nearly as long. I finally found and miraculously settled on the [DashPlanner](https://thedashplanner.com/), which hit the sweet spot of price, design, and features. But that’s another post!

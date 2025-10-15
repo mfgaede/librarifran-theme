@@ -1,7 +1,9 @@
 ---
-title: "dungeons and dragons"
+title: "Dungeons and Dragons"
 date: 2021-10-31 08:00:00 +0000
+layout: gallery
 categories: [art]
+tags: gaming
 gallery:
    - url: /assets/img/123305321_10157230031681261_6677289087017123049_n_10157230031671261.jpg
      image_path: /assets/img/thumbs/123305321_10157230031681261_6677289087017123049_n_10157230031671261.png
@@ -18,4 +20,3 @@ gallery:
    - url: /assets/img/123403350_10157230031666261_4933210855715614053_n_10157230031661261.jpg
      image_path: /assets/img/thumbs/123403350_10157230031666261_4933210855715614053_n_10157230031661261.png
 ---
-{% include gallery id="gallery" class="full" %}

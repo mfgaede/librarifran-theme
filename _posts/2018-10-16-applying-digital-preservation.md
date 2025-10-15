@@ -1,10 +1,10 @@
 ---
-title: "applying digital preservation management to digital scholarship service models"
+title: "Applying Digital Preservation Management to Digital Scholarship Service Models"
 date: 2018-10-16 23:48:16 +0000
 categories: [work]
 tag: [presentations]
 ---
- <br />
+<div style="margin-top: 1.2em;"></div>
 {% pdf "/assets/pdf/2018dlf.pdf" %}
-<br />
- <p>peer-reviewed presentation "applying digital preservation management to digital scholarship service models" for the digital library federation 2018 forum</p>
+<div style="margin-bottom: 1.2em;"></div>
+Peer-reviewed presentation "Applying Digital Preservation Management to Digital Scholarship Service Models" for the Digital Library Federation 2018 Forum</p>

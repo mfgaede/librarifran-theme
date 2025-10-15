@@ -1,6 +1,7 @@
 ---
-title: "codex hackathon"
+title: "Codex Hackathon"
 date: 2016-01-16 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/12604654_10153152457491261_3182075614210923899_o_10153152457491261.jpg
@@ -8,4 +9,3 @@ gallery:
    - url: /assets/img/12471795_10153140204246261_1441298104514773500_o_10153140204246261.jpg
      image_path: /assets/img/thumbs/12471795_10153140204246261_1441298104514773500_o_10153140204246261.png
 ---
-{% include gallery id="gallery" class="full" %}

@@ -3,6 +3,7 @@ title: "Growing Up and Out of World of Warcraft"
 date: 2021-07-25 09:00 AM
 classes: single
 categories: [posts]
+tags: gaming
 ---
 
 **Content warning:** Activision Blizzard suit awfulness; medical trauma.

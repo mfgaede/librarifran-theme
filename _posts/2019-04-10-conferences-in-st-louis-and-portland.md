@@ -1,6 +1,7 @@
 ---
-title: "conferences in st. louis and portland"
+title: "Conferences in St. Louis and Portland"
 date: 2019-04-12 08:00:00 +0000
+layout: gallery
 categories: [work]
 gallery:
    - url: /assets/img/56800822_10155791272491261_7209956896806010880_n_10155791272486261.jpg
@@ -20,18 +21,22 @@ gallery:
 
 ---
 
-<h3>spring 2019 cni in st. louis, mo</h3>
+### Spring 2019 CNI in St. Louis, MO
 
-sustainability for project-based collaborative work: leveraging service level agreements and virtual teams, coalition for networked information spring 2019 membership meeting, april 9, 2019
+Sustainability for Project-Based Collaborative Work: Leveraging Service Level Agreements and Virtual Teams, Coalition for Networked Information Spring 2019 Membership Meeting, April 9, 2019
 
-[presentation page at cni](https://www.cni.org/topics/economic-models/sustainability-for-project-based-collaborative-work-leveraging-service-level-agreements-and-virtual-teams)
-<br />
+[Presentation Page at CNI](https://www.cni.org/topics/economic-models/sustainability-for-project-based-collaborative-work-leveraging-service-level-agreements-and-virtual-teams)
+<div style="margin-top: 1.2em;"></div>
 {% pdf "/assets/pdf/cni_sustainability.pdf" %}
+<div style="margin-bottom: 1.2em;"></div>
 
-<h3>what is? information in portland, or.</h3>
+---
 
-social justice and scholarly communication, digital libraries: how new and emerging technologies enhance and reinforce the mission of academic libraries panel, what is technology?, april 12, 2019
+### What is? Technology in Portland, OR
 
-[what is technology? conference website](https://blogs.uoregon.edu/whatistechnology/program/)
-<br />
+Social Justice and Scholarly Communication, Digital Libraries: How New and Emerging Technologies Enhance and Reinforce the Mission of Academic Libraries panel, What is Technology?, April 12, 2019
+
+[What is Technology? conference website](https://blogs.uoregon.edu/whatistechnology/program/)
+<div style="margin-top: 1.2em;"></div>
 {% pdf "/assets/pdf/whatis_technology.pdf" %}
+<div style="margin-bottom: 1.2em;"></div>

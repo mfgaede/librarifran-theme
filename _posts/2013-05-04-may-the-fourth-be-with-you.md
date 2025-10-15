@@ -1,5 +1,5 @@
 ---
-title: "may the fourth be with you"
+title: "May the Fourth Be With You"
 date: 2013-05-04 08:00:00 +0000
 categories: [photos]
 ---

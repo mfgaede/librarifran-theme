@@ -1,6 +1,7 @@
 ---
 title: "Summer Garden"
 date: 2022-07-24 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/295361948_10158399561951261_6236787174273034448_n_10158399561956261.jpg
@@ -8,4 +9,3 @@ gallery:
    - url: /assets/img/295453102_10158399246506261_1265829059345406387_n_10158399246511261.jpg
      image_path: /assets/img/thumbs/295453102_10158399246506261_1265829059345406387_n_10158399246511261.png
 ---
-{% include gallery id="gallery" class="full" %}

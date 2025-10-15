@@ -1,6 +1,7 @@
 ---
-title: "visits to mom 2008 - 2009"
+title: "Visits to Mom 2008 - 2009"
 date: 2009-05-11 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery1:
    - url: /assets/img/eb6681e4d4.jpg
@@ -22,14 +23,14 @@ gallery3:
    - url: /assets/img/0a74fc4e27.jpg
      image_path: /assets/img/thumbs/0a74fc4e27.png
 ---
-<p>september 5, 2008</p>
+### September 5, 2008
 
 {% include gallery id="gallery1" layout="half" class="full" %}
 
-<p>february 11, 2009</p>
+### February 11, 2009
 
 {% include gallery id="gallery2" layout="half" class="full" %}
 
-<p>may 11, 2009</p>
+### May 11, 2009
 
 {% include gallery id="gallery3" class="full" %}

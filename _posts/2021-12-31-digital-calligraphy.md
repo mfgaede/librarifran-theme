@@ -1,6 +1,7 @@
 ---
-title: "digital calligraphy"
+title: "Digital Calligraphy"
 date: 2021-12-31 08:00:00 +0000
+layout: gallery
 categories: [art]
 gallery:
    - url: /assets/img/68676353_10156056922616261_5017494100719435776_n_10156056922611261.jpg
@@ -34,4 +35,3 @@ gallery:
    - url: /assets/img/289163200_10158348963721261_7549419140945298788_n_10158348963726261.jpg
      image_path: /assets/img/thumbs/289163200_10158348963721261_7549419140945298788_n_10158348963726261.png
 ---
-{% include gallery id="gallery" class="full" %}

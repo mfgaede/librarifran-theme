@@ -1,6 +1,7 @@
 ---
-title: "ut austin graduation - msis"
+title: "UT Austin Graduation - MSIS"
 date: 2013-05-04 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/bb89077990.jpg
@@ -20,4 +21,3 @@ gallery:
    - url: /assets/img/237d80f8fd.jpg
      image_path: /assets/img/thumbs/237d80f8fd.png
 ---
-{% include gallery id="gallery" class="full" %}

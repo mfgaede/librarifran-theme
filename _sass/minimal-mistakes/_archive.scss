@@ -150,6 +150,44 @@
   }
 }
 
+/* New: entries-grid CSS Grid override
+   This uses CSS Grid for containers that render <div class="entries-grid">
+   It keeps existing float-based `.grid__item` styles untouched for other layouts
+   but forces `.entries-grid > .grid__item` to behave as grid items.
+*/
+.entries-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.25rem;
+}
+
+/* ensure grid items are grid children rather than floated blocks */
+.entries-grid > .grid__item {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  display: flex; /* allow equal-height children */
+}
+
+.entries-grid > .grid__item > .archive__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@include breakpoint($small) {
+  .entries-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@include breakpoint($medium) {
+  .entries-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@include breakpoint($large) {
+  .entries-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+
 .grid__item {
   margin-bottom: 2em;
   padding-right: 1rem;

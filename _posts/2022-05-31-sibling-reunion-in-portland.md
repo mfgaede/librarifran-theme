@@ -1,6 +1,7 @@
 ---
 title: "Sibling Reunion in Portland"
 date: 2022-05-31 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/84872924_10156494839556261_4132561225189949440_n_10156494839536261.jpg
@@ -14,4 +15,3 @@ gallery:
    - url: /assets/img/241527055_10157889991991261_1085777911561371388_n_10157889991986261.jpg
      image_path: /assets/img/thumbs/241527055_10157889991991261_1085777911561371388_n_10157889991986261.png
 ---
-{% include gallery id="gallery" class="full" %}

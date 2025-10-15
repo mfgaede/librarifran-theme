@@ -1,6 +1,7 @@
 ---
-title: "trip to san juan island, washington"
+title: "Trip to San Juan Island, Washington"
 date: 2014-06-03 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/10336587_10152031789841261_3620211077373720312_n_10152031789841261.jpg
@@ -24,4 +25,3 @@ gallery:
    - url: /assets/img/10441366_10152029799281261_6989202207591588581_n_10152029799281261.jpg
      image_path: /assets/img/thumbs/10441366_10152029799281261_6989202207591588581_n_10152029799281261.png
 ---
-{% include gallery id="gallery" class="full" %}

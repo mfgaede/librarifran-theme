@@ -1,6 +1,7 @@
 ---
-title: "information fluency in the disciplines"
+title: "Information Fluency in the Disciplines"
 date: 2015-03-06 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/ecdf0a78cb.jpg
@@ -10,4 +11,3 @@ gallery:
    - url: /assets/img/af424e93db.jpg
      image_path: /assets/img/thumbs/af424e93db.png
 ---
-{% include gallery id="gallery" class="full" %}

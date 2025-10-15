@@ -1,6 +1,7 @@
 ---
-title: "summer vacation 2011"
+title: "Summer Vacation 2011"
 date: 2011-08-19 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery: 
    - url: /assets/img/bradytx1.jpg
@@ -42,4 +43,3 @@ gallery:
    - url: /assets/img/8b1533b2e3.jpg
      image_path: /assets/img/thumbs/8b1533b2e3.png
 ---
-{% include gallery id="gallery" class="full" %}

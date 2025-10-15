@@ -1,6 +1,7 @@
 ---
 title: "Homecoming #4"
 date: 2024-01-18 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
   - url: /assets/img/bliss.jpg

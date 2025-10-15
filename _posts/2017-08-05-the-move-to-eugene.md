@@ -1,6 +1,7 @@
 ---
-title: "the move to eugene"
+title: "The Move to Eugene"
 date: 2017-08-05 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/19424295_10154386361361261_8705484003323687668_n_10154386361361261.jpg
@@ -28,4 +29,3 @@ gallery:
    - url: /assets/img/20664090_10154515559336261_1259774357111607300_n_10154515559336261.jpg
      image_path: /assets/img/thumbs/20664090_10154515559336261_1259774357111607300_n_10154515559336261.png
 ---
-{% include gallery id="gallery" class="full" %}

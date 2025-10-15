@@ -1,6 +1,7 @@
 ---
 title: "new mexico summer vacation"
 date: 2012-08-30 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery1: 
    - url: /assets/img/c5c3ad08a6.jpg
@@ -64,27 +65,30 @@ gallery5:
    - url: /assets/img/96910bf5ff.jpg
      image_path: /assets/img/thumbs/96910bf5ff.png
 ---
-<h3>carlsbad caverns</h3>
+### carlsbad caverns
 
 {% include gallery id="gallery1" class="full" %}
 
 ---
 
-<h3>inn of the mountain gods</h3>
+### inn of the mountain gods
 
 {% include gallery id="gallery2" class="full" %}
 
 ---
 
-<h3>outside cloudcroft, new mexico</h3>
+### outside cloudcroft, new mexico
+
 {% include gallery id="gallery3" class="full" %}
 
 ---
 
-<h3>white sands national park</h3>
+### white sands national park
+
 {% include gallery id="gallery4" class="full" %}
 
 ---
 
-<h3>sandia peak and santa fe</h3>
+### sandia peak and santa fe
+
 {% include gallery id="gallery5" class="full" %}

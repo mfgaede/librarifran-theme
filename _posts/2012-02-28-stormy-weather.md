@@ -1,7 +1,7 @@
 ---
 title: "Stormy Weather"
 date: 2012-02-28 20:53:08 +0000
-categories: [videos]
-
+layout: video
+categories: [videos, music]
+youtube_id: "zBb9hTyLjfM"
 ---
-{% include video id="zBb9hTyLjfM" provider="youtube" %}

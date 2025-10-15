@@ -24,7 +24,7 @@ July 2024 - present
 Eugene, Oregon  
 August 2017 - July 2024
 
-- Supervised Libraries personnel with up to 9.25 FTE reporting, including faculty, staff, and students whose positions are full- and part-time, union and non-union, permanent, temporary, and funding-contingent. 
+- Supervised Libraries personnel with up to 9.25 FTE reporting, including faculty, staff, and students whose positions are full- and part-time, union and non-union, permanent, temporary, and funding-contingent.
 - Managed up to seven budget indexes over $1.3 million, including an income line, two student budgets, three supplies budgets, plus two grant budget lines, consistently staying under budget while maximizing services, library spaces, and staff professional development.
 - Led the University’s open access publishing efforts and collaborated with partners to promote open access on campus, including passing the first comprehensive open access policy through University Senate, managing an Article Processing Fund, and supporting the adoption, remixing, and creation of Open Educational Resources and low-cost course materials.
 - Led the University’s support for research data, including the development of a data repository, extracurricular training and workshops, consultation services, and data management plan development.
@@ -80,12 +80,13 @@ Aug. 2008 - May 2009
 ## Education
 
 ### The University of Texas at Austin  
+
 Austin, Texas  
 
 M.S. in Information Studies  
 Focus: Digital Libraries  
 Capstone: [Alphabet Soup: METS, MODS, and Metadata Guidelines for Still Images](/work/2013/05/18/alphabet-soup.html)  
- 
+
 B.A. with Highest Honors in History  
 Austin, Texas  
 
@@ -109,7 +110,7 @@ $350,000 awarded. Key personnel.
 - Mericle, D. and Thornhill, K. (2022). [Memory Work for Black Lives](https://memorywork.uoregon.edu). University of Oregon *Libraries Innovation Grant*. $4,750 awarded. Project Team Member.
 - Donaldson, K., Gaede, F., Snipes, G., and Thornhill, K. (2022) [Understanding and Establishing Digital Scholarly Identity](https://researchguides.uoregon.edu/scholarly_identity). University of Oregon *Libraries Innovation Grant*. $4,590 awarded. Project Team Leader.
 - Thornhill, K. (2022) Digital Library Federation Membership. University of Oregon *Libraries Innovation Grant*. $6,750 awarded. Project Team Member.
-- Arroyo, J., Reyes-Santos, A., Carey, M., LeMenager, S., Pulido, L., & Weisiger, M. (2021). [Pacific Northwest Just Futures Institute for Racial and Climate Justice](https://jfi.uoregon.edu/). *The Andrew W. Mellon Foundation*. $4,520,000 awarded. Project Team Leader. 
+- Arroyo, J., Reyes-Santos, A., Carey, M., LeMenager, S., Pulido, L., & Weisiger, M. (2021). [Pacific Northwest Just Futures Institute for Racial and Climate Justice](https://jfi.uoregon.edu/). *The Andrew W. Mellon Foundation*. $4,520,000 awarded. Project Team Leader.
 - Gaede, F. & Mellinger, M. (2019). [Open Impact: Developing Robust Analytics for Open Source Solution Bundle Hyrax](https://www.imls.gov/grants/awarded/lg-36-19-0033-19). *Institute of Museum and Library Services* LG-36-19-0033. $203,508 awarded. Co-PI.
 - Lim, A., Hartz, J., Watson, M., Weber, J., Stoddart, E., & Gaede, F. (2018). [Leveraging GLAM Assets in Research, Teaching, and Learning: Mellon Faculty Fellowships to Advance Library-Museum Collaboration](https://glamalliance.uoregon.edu/). *The Andrew W. Mellon Foundation*. $300,000 awarded. Co-PI.
 
@@ -192,7 +193,7 @@ Archivists 2023 Conference. July 26-29, 2023
 
 ### University of Oregon
 
-*Service to Libraries*
+#### Service to Libraries
 
 Chair, University of Oregon Library Staff Association  
 July 2021 - September 2023, July 2024 - present
@@ -308,7 +309,7 @@ January 2018 - March 2018
 Leader, Digital Exhibits Platform Exploration Task Force  
 November 2017 - July 2018
 
-*Service to University*
+#### Service to University
 
 Member, Undergraduate Research Symposium Steering Committee
 October 2022 - present
@@ -346,7 +347,7 @@ December 2018 - March 2019
 Abstract Reviewer, Undergraduate Research Symposium
 March 2018 - April 2018
 
-*Service to Profession*
+#### Service to Profession
 
 Reviewer, *Digital Humanities Quarterly*  
 August 2017 - present
@@ -359,9 +360,9 @@ July 2019 - March 2020
 
 ### Butler University
 
-*Service to Libraries*
+#### Service to Libraries
 
-Design and Copy Editor, Butler Journal of Undergraduate Research  
+Design and Copy Editor, *Butler Journal of Undergraduate Research*
 March 2015 - July 2017
 
 Library Advisor, BU Well  
@@ -373,7 +374,7 @@ August 2013 - July 2017
 Steering Committee Chair, Institutional Repository Advisory Group, Private Academic Library Network of Indiana  
 August 2013 - July 2017
 
-*Service to University*
+#### Service to University
 
 Representative, Council of Independent Colleges Information Fluency Workshop  
 February 2015
@@ -384,7 +385,7 @@ November 2014 - July 2017
 Vice Chair, Academic Affairs Committee  
 August 2014 - Jan 2017
 
-*Service to Profession*
+#### Service to Profession
 
 Reviewer, Digital Humanities Advancement Grants, National Endowment of the Humanities  
 April 2017

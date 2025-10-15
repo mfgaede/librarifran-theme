@@ -81,10 +81,42 @@ $(function() {
     });
   }
 
-  // add lightbox class to all image links
-  $(
+  // add lightbox class to image links only when the image's intrinsic width
+  // exceeds the display cap for the containing figure (small/medium/large)
+  var $imageLinks = $(
     "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']"
-  ).has("> img").addClass("image-popup");
+  ).has("> img");
+
+  $imageLinks.each(function() {
+    var $a = $(this);
+    var $img = $a.find('img').first();
+
+    var getCap = function() {
+      var $figure = $a.closest('figure');
+      if ($figure.length) {
+        if ($figure.hasClass('figure--medium')) return 720;
+        if ($figure.hasClass('figure--large')) return 1000;
+      }
+      return 420; // default small cap
+    };
+
+    var checkAndMark = function() {
+      var cap = getCap();
+      var nat = $img[0] && $img[0].naturalWidth ? $img[0].naturalWidth : 0;
+      // If natural width is not available (0), enable lightbox by default.
+      if (!nat || nat > cap) {
+        $a.addClass('image-popup');
+      }
+    };
+
+    if ($img[0] && $img[0].complete) {
+      checkAndMark();
+    } else {
+      $img.on('load', checkAndMark);
+      // also set a timeout fallback in case load doesn't fire (rare)
+      setTimeout(checkAndMark, 2000);
+    }
+  });
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({

@@ -1,6 +1,7 @@
 ---
-title: "west lafayette"
+title: "West Lafayette"
 date: 2013-08-18 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/6e9fe31df7.jpg
@@ -12,4 +13,3 @@ gallery:
    - url: /assets/img/3d23d88e22.jpg
      image_path: /assets/img/thumbs/3d23d88e22.png
 ---
-{% include gallery id="gallery" class="full" %}

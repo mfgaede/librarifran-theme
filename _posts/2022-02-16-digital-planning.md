@@ -1,7 +1,9 @@
 ---
-title: "digital planning"
+title: "Digital Planning"
 date: 2022-02-16 08:00:00 +0000
+layout: gallery
 categories: [photos]
+tags: planning
 gallery:
    - url: /assets/img/272734136_10158118995581261_6330378605146410210_n_10158118995586261.jpg
      image_path: /assets/img/thumbs/272734136_10158118995581261_6330378605146410210_n_10158118995586261.png
@@ -12,4 +14,3 @@ gallery:
    - url: /assets/img/274449230_10158162074831261_6206934380315671352_n_10158162074841261.jpg
      image_path: /assets/img/thumbs/274449230_10158162074831261_6206934380315671352_n_10158162074841261.png
 ---
-{% include gallery id="gallery" class="full" %}

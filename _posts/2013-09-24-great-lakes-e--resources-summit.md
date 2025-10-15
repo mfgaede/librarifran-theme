@@ -1,6 +1,7 @@
 ---
-title: "great lakes e-resources summit"
+title: "Great Lakes E-Resources Summit"
 date: 2013-09-24 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/41faf350e9.jpg
@@ -22,4 +23,3 @@ gallery:
    - url: /assets/img/6a9f5db91c.jpg
      image_path: /assets/img/thumbs/6a9f5db91c.png
 ---
-{% include gallery id="gallery" class="full" %}

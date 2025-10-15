@@ -1,5 +1,5 @@
 ---
-title: "maps at perry-castañeda library"
+title: "Maps at Perry-Castañeda Library"
 date: 2013-05-04 08:00:00 +0000
 categories: [photos]
 ---

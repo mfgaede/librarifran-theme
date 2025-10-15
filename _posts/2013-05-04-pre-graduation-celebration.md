@@ -1,6 +1,7 @@
 ---
-title: "pre-graduation celebration"
+title: "Pre-Graduation Celebration"
 date: 2013-05-04 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/a47d9bd217.jpg
@@ -22,4 +23,3 @@ gallery:
    - url: /assets/img/cb721a5f0f.jpg
      image_path: /assets/img/thumbs/cb721a5f0f.png
 ---
-{% include gallery id="gallery" class="full" %}

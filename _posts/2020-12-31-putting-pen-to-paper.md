@@ -1,6 +1,7 @@
 ---
-title: "putting pen to paper"
+title: "Putting Pen to Paper"
 date: 2020-12-31 08:00:00 +0000
+layout: gallery
 categories: [art]
 gallery:
    - url: /assets/img/271719517_10158095028501261_7075786333919076290_n_10158095022306261.jpg
@@ -16,4 +17,3 @@ gallery:
    - url: /assets/img/277250616_10158209948296261_6828027451056208364_n_10158209948301261.jpg
      image_path: /assets/img/thumbs/277250616_10158209948296261_6828027451056208364_n_10158209948301261.png
 ---
-{% include gallery id="gallery" class="full" %}

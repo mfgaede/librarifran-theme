@@ -1,6 +1,7 @@
 ---
-title: "ut austin graduation"
+title: "UT Austin Graduation"
 date: 2011-05-21 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/d1b183e7c5.jpg

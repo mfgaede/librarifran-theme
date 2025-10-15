@@ -1,6 +1,7 @@
 ---
-title: "visit to austin"
+title: "Visit to Austin"
 date: 2014-06-06 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/1912057_10152040316491261_6710165211235233514_o_10152040316491261.jpg
@@ -30,4 +31,3 @@ gallery:
    - url: /assets/img/10454983_10152043358681261_2547720511217536551_o_10152043358681261.jpg
      image_path: /assets/img/thumbs/10454983_10152043358681261_2547720511217536551_o_10152043358681261.png
 ---
-{% include gallery id="gallery" class="full" %}

@@ -1,6 +1,7 @@
 ---
-title: "on tuesdays we wear teal"
+title: "On Tuesdays We Wear Teal"
 date: 2013-05-04 08:00:00 +0000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/32de3ebecc.jpg

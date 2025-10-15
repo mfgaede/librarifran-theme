@@ -1,5 +1,5 @@
 ---
-title: "oregon digital: hyrax analytics"
+title: "Oregon Digital: Hyrax Analytics"
 date: 2020-10-20 23:48:16 +0000
 categories: [work]
 tag: [presentations]
@@ -7,6 +7,8 @@ tag: [presentations]
  
 {% include video id="kAX0zG3Yxl0&t=1586s" provider="youtube" %}
 
+<div style="margin-top: 1.2em;"></div>
 {% pdf "/assets/pdf/od_analytics.pdf" %}
-<br />
- <p>peer reviewed presentation "oregon digital: hyrax analytics" for samvera connect 2020</p>
+<div style="margin-bottom: 1.2em;"></div>
+
+Peer-reviewed presentation "Oregon Digital: Hyrax Analytics" for Samvera Connect 2020

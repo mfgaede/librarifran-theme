@@ -1,6 +1,7 @@
 ---
-title: "12th anniversary trip to yachats"
-date: 2022-07-16 08:00:00 +0000
+title: "12th Anniversary Trip to Yachats"
+date: 2022-07-16 08:00:00 +000
+layout: gallery
 categories: [photos]
 gallery:
    - url: /assets/img/293389260_10158389536991261_609124586818084272_n_10158389536241261.jpg
@@ -10,4 +11,3 @@ gallery:
    - url: /assets/img/294107192_10158389536931261_37642570526792889_n_10158389536171261.jpg
      image_path: /assets/img/thumbs/294107192_10158389536931261_37642570526792889_n_10158389536171261.png
 ---
-{% include gallery id="gallery" class="full" %}
