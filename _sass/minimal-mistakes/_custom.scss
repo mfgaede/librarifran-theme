@@ -104,3 +104,85 @@
 .archive__item-body {
   text-align: center; /* Center the content */
 }
+
+/* Video channel link styling: orange and underline on hover */
+.video-metadata {
+  a.channel-link {
+    color: $primary-color;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease, text-decoration 0.15s ease;
+  }
+  a.channel-link:hover,
+  a.channel-link:focus {
+    text-decoration: underline;
+    border-color: transparent;
+    color: darken($primary-color, 5%);
+  }
+}
+
+/* Figure size utilities: default to smaller figures for inline includes */
+.figure--small img,
+.figure--medium img,
+.figure--large img {
+  display: block;
+  /* prevent global rules from forcing images to fill the container */
+  width: auto !important;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.figure--small img {
+  max-width: 420px !important; /* small by default (original) */
+}
+
+.figure--medium img {
+  max-width: 720px !important;
+}
+
+.figure--large img {
+  max-width: 1000px !important;
+}
+
+/* Responsive tweak: reduce max-width on very small screens */
+@media screen and (max-width: 420px) {
+  .figure--small img,
+  .figure--medium img,
+  .figure--large img {
+    max-width: 100%;
+  }
+}
+
+/* Alignment helpers */
+.align-left { float: left; margin-right: 1rem; }
+.align-right { float: right; margin-left: 1rem; }
+.align-center { display: block; margin-left: auto; margin-right: auto; }
+
+/* Center figcaption by default when using default figure alignment */
+figure.align-center figcaption,
+.figure--center figcaption { text-align: center; }
+
+/* Caption utilities */
+.figure__caption { font-size: 0.95em; color: $dark-gray; margin-top: 0.5rem; }
+.figure__caption--muted { color: lighten($text-color, 30%); }
+.figure__caption--small { font-size: 0.85em; }
+
+/* Clear floats after figure if left/right aligned */
+figure.align-left::after,
+figure.align-right::after { content: ""; display: table; clear: both; }
+
+/* PDF embed spacing: add a little top/bottom gap for embedded PDF viewers
+   These embeds generate per-embed wrapper classes like `pdf-embed-wrap-<uuid>`
+   in the generated HTML. Target those wrappers and common PDF iframes/embeds
+   only inside post content so this change is scoped and safe. */
+.post__content [class^="pdf-embed-wrap-"],
+.post__content [class*=" pdf-embed-wrap-"],
+.post__content iframe[src$=".pdf"],
+.post__content embed[type="application/pdf"],
+.post__content .pdf-embed {
+  margin: 0.6rem 0 !important;
+  padding: 0 !important; /* don't introduce extra inner spacing */
+  display: block !important;
+}
+

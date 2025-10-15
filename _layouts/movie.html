@@ -1,0 +1,177 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="page page--movie" itemscope itemtype="https://schema.org/Movie"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="name" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="name">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+
+          {% comment %}<!-- Movie Metadata -->{% endcomment %}
+          {% if page.year or page.genre or page.director or page.rating %}
+          <div class="movie-metadata" style="margin-bottom: 1em;">
+            {% if page.year %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-calendar" style="color: #ff6105;"></i> Year: <strong>{{ page.year }}</strong>
+            </p>
+            {% endif %}
+            {% if page.genre %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-tags" style="color: #ff6105;"></i> Genre: <strong>{{ page.genre }}</strong>
+            </p>
+            {% endif %}
+            {% if page.director %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-film" style="color: #ff6105;"></i> Director: <strong>{{ page.director }}</strong>
+            </p>
+            {% endif %}
+            {% if page.rating %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-star" style="color: #ff6105;"></i> My Rating: <strong>{{ page.rating }}</strong>
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% comment %}<!-- Trailer: full width at top -->{% endcomment %}
+        {% if page.youtube_id or page.vimeo_id %}
+        <div class="movie-trailer--top" style="margin: 1.5em 0;">
+          {% if page.youtube_id %}
+            {% include video id=page.youtube_id provider="youtube" %}
+          {% elsif page.vimeo_id %}
+            {% include video id=page.vimeo_id provider="vimeo" %}
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% comment %}<!-- Two-column layout when a poster is present, otherwise single-column -->{% endcomment %}
+        {% if page.poster %}
+        <div class="movie-layout" style="display: flex; gap: 1.25em; margin: 1.5em 0; flex-wrap: wrap; align-items: flex-start;">
+          <aside class="movie-poster-col" style="flex: 0 0 220px; max-width: 220px;">
+            <div class="movie-poster" style="width: 100%;">
+              <img src="{{ page.poster }}" alt="{{ page.title }} poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" itemprop="image">
+            </div>
+          </aside>
+          <div class="movie-content-col" style="flex: 1 1 300px; min-width: 220px;">
+            {{ content }}
+
+            {% if page.link %}<div style="margin-top:1em;"><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "More Information" }}</a></div>{% endif %}
+
+            {% comment %}<!-- Streaming Platform Links (moved below content so body appears at top next to poster) -->{% endcomment %}
+            {% if page.streaming %}
+            <div class="streaming-links">
+              <div class="streaming-links__platforms" style="display: flex; flex-wrap: wrap; gap: 0.5em;">
+                {% if page.streaming.netflix %}
+                <a href="{{ page.streaming.netflix }}" class="btn" style="background-color: #E50914; color: white; text-decoration: none;" target="_blank" rel="noopener">Netflix</a>
+                {% endif %}
+                {% if page.streaming.prime_video %}
+                <a href="{{ page.streaming.prime_video }}" class="btn" style="background-color: #00A8E1; color: white; text-decoration: none;" target="_blank" rel="noopener">Prime Video</a>
+                {% endif %}
+                {% if page.streaming.disney_plus %}
+                <a href="{{ page.streaming.disney_plus }}" class="btn" style="background-color: #113CCF; color: white; text-decoration: none;" target="_blank" rel="noopener">Disney+</a>
+                {% endif %}
+                {% if page.streaming.hbo_max %}
+                <a href="{{ page.streaming.hbo_max }}" class="btn" style="background-color: #5B35E5; color: white; text-decoration: none;" target="_blank" rel="noopener">HBO Max</a>
+                {% endif %}
+                {% if page.streaming.apple_tv %}
+                <a href="{{ page.streaming.apple_tv }}" class="btn" style="background-color: #000; color: white; text-decoration: none;" target="_blank" rel="noopener">Apple TV+</a>
+                {% endif %}
+                {% if page.streaming.other %}
+                <a href="{{ page.streaming.other }}" class="btn btn--primary" target="_blank" rel="noopener">More</a>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% else %}
+          {% comment %}No poster: render streaming links then content in normal flow{% endcomment %}
+          {% if page.streaming %}
+          <div class="streaming-links" style="margin: 0 0 1.25em 0; padding: 1em; background: #f8f9fa; border-radius: 8px;">
+            <div class="streaming-links__platforms" style="display: flex; flex-wrap: wrap; gap: 0.5em;">
+              {% if page.streaming.netflix %}
+              <a href="{{ page.streaming.netflix }}" class="btn" style="background-color: #E50914; color: white; text-decoration: none;" target="_blank" rel="noopener">Netflix</a>
+              {% endif %}
+              {% if page.streaming.prime_video %}
+              <a href="{{ page.streaming.prime_video }}" class="btn" style="background-color: #00A8E1; color: white; text-decoration: none;" target="_blank" rel="noopener">Prime Video</a>
+              {% endif %}
+              {% if page.streaming.disney_plus %}
+              <a href="{{ page.streaming.disney_plus }}" class="btn" style="background-color: #113CCF; color: white; text-decoration: none;" target="_blank" rel="noopener">Disney+</a>
+              {% endif %}
+              {% if page.streaming.hbo_max %}
+              <a href="{{ page.streaming.hbo_max }}" class="btn" style="background-color: #5B35E5; color: white; text-decoration: none;" target="_blank" rel="noopener">HBO Max</a>
+              {% endif %}
+              {% if page.streaming.apple_tv %}
+              <a href="{{ page.streaming.apple_tv }}" class="btn" style="background-color: #000; color: white; text-decoration: none;" target="_blank" rel="noopener">Apple TV+</a>
+              {% endif %}
+              {% if page.streaming.other %}
+              <a href="{{ page.streaming.other }}" class="btn btn--primary" target="_blank" rel="noopener">More</a>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
+
+          {{ content }}
+
+          {% if page.link %}<div style="margin-top:1em;"><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "More Information" }}</a></div>{% endif %}
+        {% endif %}
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+        {% if page.comments %}
+        <div class="page__comments">
+          {% include comments-providers/custom.html %}
+        </div>
+      {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+  </article>
+  <script src="/assets/js/copyCode.js"></script>
+  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>

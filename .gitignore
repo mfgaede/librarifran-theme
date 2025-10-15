@@ -1,0 +1,39 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# IDE files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ruby environment
+.ruby-version
+.ruby-gemset
+.bundle/
+vendor/
+
+# Node / front-end dependencies (do not track node_modules)
+node_modules/
+assets/node_modules/
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*~
+
+# Ignore site PDFs or generated assets if you want (optional)
+# assets/pdf/
