@@ -1,0 +1,110 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="page page--video" itemscope itemtype="https://schema.org/VideoObject"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="name" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="uploadDate" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="name">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+          {% if page.creator or page.channel or page.duration %}
+          <div class="video-metadata" style="margin-bottom: 1em;">
+            {% if page.creator %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-user" style="color: #ff6105;"></i> <strong>Creator:</strong> {{ page.creator }}
+            </p>
+            {% endif %}
+            {% comment %}Channel: prefer explicit handle/url if provided, fall back to `page.channel`{% endcomment %}
+            {% if page.channel_url %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-tv" style="color: #ff6105;"></i> <strong>Channel:</strong>
+                <a href="{{ page.channel_url }}" class="channel-link" target="_blank" rel="noopener noreferrer">
+                  {% if page.channel_handle %}{{ page.channel_handle }}{% elsif page.channel %}{{ page.channel }}{% else %}Link{% endif %}
+                </a>
+            </p>
+            {% elsif page.channel_handle %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-tv" style="color: #ff6105;"></i> <strong>Channel:</strong> {{ page.channel_handle }}
+            </p>
+            {% elsif page.channel %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-tv" style="color: #ff6105;"></i> <strong>Channel:</strong> {{ page.channel }}
+            </p>
+            {% endif %}
+            {% if page.duration %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-clock" style="color: #ff6105;"></i> <strong>Duration:</strong> {{ page.duration }}
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% comment %}<!-- Auto-embed video if youtube_id or vimeo_id is provided -->{% endcomment %}
+        {% if page.youtube_id %}
+          {% include video id=page.youtube_id provider="youtube" %}
+        {% elsif page.vimeo_id %}
+          {% include video id=page.vimeo_id provider="vimeo" %}
+        {% endif %}
+
+        {{ content }}
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Watch on External Site" }}</a></div>{% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+        {% if page.comments %}
+        <div class="page__comments">
+          {% include comments-providers/custom.html %}
+        </div>
+      {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+  </article>
+  <script src="/assets/js/copyCode.js"></script>
+  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>

@@ -1,0 +1,190 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="page page--gallery" itemscope itemtype="https://schema.org/ImageGallery"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="name" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="name">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+
+          {% comment %}<!-- Gallery Metadata -->{% endcomment %}
+          {% if page.location or page.photo_date or page.photographer or page.people %}
+          <div class="gallery-metadata" style="margin-bottom: 1em;">
+            {% if page.location %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-map-marker-alt" style="color: #ff6105;"></i> Location: <strong>{{ page.location }}</strong>
+            </p>
+            {% endif %}
+            {% if page.photo_date %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-calendar-day" style="color: #ff6105;"></i> Date: <strong>{{ page.photo_date }}</strong>
+            </p>
+            {% endif %}
+            {% if page.people %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-users" style="color: #ff6105;"></i> People: <strong>{{ page.people }}</strong>
+            </p>
+            {% endif %}
+            {% if page.photographer %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-camera" style="color: #ff6105;"></i> Photographer: <strong>{{ page.photographer }}</strong>
+            </p>
+            {% endif %}
+            {% comment %}<!-- Count total photos across all galleries -->{% endcomment %}
+            {% assign total_photos = 0 %}
+            {% if page.gallery %}
+              {% assign total_photos = total_photos | plus: page.gallery.size %}
+            {% endif %}
+            {% for i in (1..20) %}
+              {% assign gallery_name = "gallery" | append: i %}
+              {% assign current_gallery = page[gallery_name] %}
+              {% if current_gallery %}
+                {% assign total_photos = total_photos | plus: current_gallery.size %}
+              {% endif %}
+            {% endfor %}
+            {% if total_photos > 0 %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-images" style="color: #ff6105;"></i> Photos: <strong>{{ total_photos }}</strong>
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% if page.toc %}
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
+              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
+            </nav>
+          </aside>
+        {% endif %}
+
+        {% comment %}<!-- Auto-display single gallery if no content -->{% endcomment %}
+        {% assign stripped_content = content | strip %}
+        {% if page.gallery and stripped_content == "" %}
+          {% include gallery id="gallery" class="full" %}
+        {% elsif stripped_content != "" %}
+          {{ content }}
+        {% endif %}
+
+        {% comment %}<!-- Show message if no galleries defined -->{% endcomment %}
+        {% if page.gallery == nil and page.gallery1 == nil and stripped_content == "" %}
+          <p style="color: #999; text-align: center; padding: 2em;">
+            <i class="fas fa-images" style="font-size: 3em; display: block; margin-bottom: 0.5em; opacity: 0.3;"></i>
+            No images in this gallery yet.
+          </p>
+        {% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+        {% if page.comments %}
+        <div class="page__comments">
+          {% include comments-providers/custom.html %}
+        </div>
+      {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+  </article>
+  <script src="/assets/js/copyCode.js"></script>
+
+  {% comment %}<!-- Masonry Gallery Styling -->{% endcomment %}
+  {% if page.gallery_style == "masonry" or page.gallery_style == nil %}
+  <style>
+    /* Pinterest-style masonry layout for galleries */
+    .page--gallery figure.full,
+    .page--gallery figure.third,
+    .page--gallery figure.half {
+      display: block !important;
+      column-count: 3;
+      column-gap: 1em;
+      margin: 2em 0;
+    }
+
+    @media (max-width: 768px) {
+      .page--gallery figure.full,
+      .page--gallery figure.third,
+      .page--gallery figure.half {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page--gallery figure.full,
+      .page--gallery figure.third,
+      .page--gallery figure.half {
+        column-count: 1;
+      }
+    }
+
+    .page--gallery figure a {
+      break-inside: avoid;
+      margin-bottom: 1em;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .page--gallery figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .page--gallery figure a:hover img {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+  </style>
+  {% endif %}
+
+  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>

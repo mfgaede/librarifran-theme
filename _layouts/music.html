@@ -1,0 +1,226 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+<div id="main" role="main">
+  {% include sidebar.html %}
+  <article class="page page--music" itemscope itemtype="https://schema.org/MusicRecording"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="name" content="{{ page.title | replace: '|', '&#124;' | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title -%}
+          <h1 id="page-title" class="page__title" itemprop="name">
+            <a href="{{ page.url | absolute_url }}" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+          </h1>
+          {%- endif %}
+          {% if page.song or page.artist or page.album or page.genre %}
+          <div class="music-metadata" style="margin-bottom: 1em;">
+            {% if page.song %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-music" style="color: #ff6105;"></i> Song: <strong>{{ page.song }}</strong>
+            </p>
+            {% endif %}
+            {% if page.artist %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-user" style="color: #ff6105;"></i> Artist: <strong>{{ page.artist }}</strong>
+            </p>
+            {% endif %}
+            {% if page.album %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-compact-disc" style="color: #ff6105;"></i> Album: <strong>{{ page.album }}</strong>
+            </p>
+            {% endif %}
+            {% if page.genre %}
+            <p class="page__meta" style="margin: 0.25em 0;">
+              <i class="fas fa-tags" style="color: #ff6105;"></i> Genre: <strong>{{ page.genre }}</strong>
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% include page__meta.html %}
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {% comment %}<!-- Streaming Platform Links with Embed Switching -->{% endcomment %}
+        {% if page.streaming %}
+        <div class="streaming-links" style="margin: 2em 0; padding: 1.5em; background: #f8f9fa; border-radius: 8px;">
+          <h3 style="margin-top: 0; margin-bottom: 1em; font-size: 1.2em;">
+            <i class="fas fa-headphones"></i> Listen on Streaming Platforms
+          </h3>
+
+          {% comment %}<!-- Embed Container -->{% endcomment %}
+          <div id="music-embed-container" style="margin-bottom: 1.5em; min-height: 152px; background: #fff; border-radius: 8px; overflow: hidden;">
+            <div id="music-embed-content" style="display: flex; align-items: center; justify-content: center; min-height: 152px; padding: 1em;">
+              <p style="color: #666; text-align: center; margin: 0;">
+                <i class="fas fa-music" style="font-size: 2em; margin-bottom: 0.5em; display: block; opacity: 0.5;"></i>
+                Click a platform below to play
+              </p>
+            </div>
+          </div>
+
+          <div class="streaming-links__platforms" style="display: flex; flex-wrap: wrap; gap: 0.75em;">
+            {% if page.streaming.youtube %}
+            <button onclick="switchEmbed('youtube', '{{ page.streaming.youtube }}')" class="btn btn--danger platform-btn" data-platform="youtube" style="background-color: #FF0000; color: white; border: none; cursor: pointer;">
+              <i class="fab fa-youtube"></i> YouTube
+            </button>
+            {% endif %}
+            {% if page.streaming.spotify %}
+            <button onclick="switchEmbed('spotify', '{{ page.streaming.spotify }}')" class="btn btn--success platform-btn" data-platform="spotify" style="background-color: #1DB954; color: white; border: none; cursor: pointer;">
+              <i class="fab fa-spotify"></i> Spotify
+            </button>
+            {% endif %}
+            {% if page.streaming.apple_music %}
+            <button onclick="switchEmbed('apple_music', '{{ page.streaming.apple_music }}')" class="btn btn--danger platform-btn" data-platform="apple_music" style="background-color: #FA243C; color: white; border: none; cursor: pointer;">
+              <i class="fab fa-apple"></i> Apple Music
+            </button>
+            {% endif %}
+          </div>
+
+          <p style="margin-top: 0.75em; margin-bottom: 0; font-size: 0.75em; color: #666; text-align: center;">
+            <i class="fas fa-external-link-alt" style="font-size: 0.9em;"></i> Click to play • Right-click to open in new tab
+          </p>
+        </div>
+        {% endif %}
+
+        {{ content }}
+
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Listen on External Site" }}</a></div>{% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+        {% include page__date.html %}
+        {% if page.comments %}
+        <div class="page__comments">
+          {% include comments-providers/custom.html %}
+        </div>
+      {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+  </article>
+  <script src="/assets/js/copyCode.js"></script>
+
+  {% comment %}<!-- Music Embed Switching JavaScript -->{% endcomment %}
+  {% if page.streaming %}
+  <script>
+    function switchEmbed(platform, url) {
+      const container = document.getElementById('music-embed-content');
+      const embedContainer = document.getElementById('music-embed-container');
+
+      // Add loading state
+      container.innerHTML = '<p style="color: #666; text-align: center;"><i class="fas fa-spinner fa-spin"></i> Loading...</p>';
+
+      // Visual feedback - highlight active button
+      document.querySelectorAll('.platform-btn').forEach(btn => {
+        btn.style.opacity = '0.6';
+        btn.style.transform = 'scale(1)';
+      });
+      event.target.closest('.platform-btn').style.opacity = '1';
+      event.target.closest('.platform-btn').style.transform = 'scale(1.05)';
+
+      let embedHTML = '';
+
+      // Generate embed code based on platform
+      switch(platform) {
+        case 'youtube':
+          // Convert YouTube URL to embed format
+          let youtubeId = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/)?.[1];
+          if (youtubeId) {
+            embedHTML = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 8px;"></iframe>`;
+          }
+          break;
+
+        case 'spotify':
+          // Convert Spotify URL to embed format
+          let spotifyId = url.match(/track\/([a-zA-Z0-9]+)/)?.[1] || url.match(/album\/([a-zA-Z0-9]+)/)?.[1];
+          let spotifyType = url.includes('/track/') ? 'track' : 'album';
+          if (spotifyId) {
+            embedHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/${spotifyType}/${spotifyId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+          }
+          break;
+
+        case 'apple_music':
+          // Apple Music embeds
+          embedHTML = `<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="${url.replace('music.apple.com', 'embed.music.apple.com')}"></iframe>`;
+          break;
+
+        default:
+          embedHTML = `<p style="color: #666; text-align: center;">Embed not available for this platform. <a href="${url}" target="_blank" rel="noopener">Open in new tab</a></p>`;
+      }
+
+      if (!embedHTML) {
+        embedHTML = `<p style="color: #666; text-align: center;">Could not generate embed. <a href="${url}" target="_blank" rel="noopener">Open in new tab</a></p>`;
+      }
+
+      // Delay slightly for loading effect
+      setTimeout(() => {
+        container.innerHTML = embedHTML;
+        container.style.padding = '0';
+        container.style.minHeight = '0';
+        embedContainer.style.minHeight = 'auto';
+      }, 300);
+    }
+
+    // Allow right-click to open in new tab
+    document.querySelectorAll('.platform-btn').forEach(btn => {
+      btn.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        const platform = btn.getAttribute('data-platform');
+        const url = btn.getAttribute('onclick').match(/'([^']+)'\)/)?.[1];
+        if (url) {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      });
+
+      // Add hover effect
+      btn.addEventListener('mouseenter', (e) => {
+        if (btn.style.opacity !== '1') {
+          btn.style.opacity = '0.8';
+        }
+      });
+      btn.addEventListener('mouseleave', (e) => {
+        if (btn.style.transform !== 'scale(1.05)') {
+          btn.style.opacity = '0.6';
+        }
+      });
+    });
+  </script>
+  {% endif %}
+
+  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    {% include page__related.html posts=site.related_posts %}
+  {% comment %}<!-- otherwise show recent posts if no related when `related: true` -->{% endcomment %}
+  {% elsif page.id and page.related %}
+    {% include page__related.html posts=site.posts %}
+  {% endif %}
+</div>
