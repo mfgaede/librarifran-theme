@@ -4,10 +4,11 @@
 # Based on: https://support.reclaimhosting.com/hc/en-us/articles/4406431747223-Using-Rsync-to-Move-Files
 
 # Configuration - UPDATE THESE FOR YOUR HOSTING
-HOST="berzerk.reclaimhosting.com"       # Your Reclaim server hostname
+HOST="librarifran.com"                 # Your Reclaim server hostname
 USERNAME="librarif"                    # Your cPanel username
-REMOTE_PATH="librarifran.com/"         # Path for your site folder
+REMOTE_PATH="public_html/"             # Path for your site folder
 LOCAL_PATH="_site/"                    # Local Jekyll build directory
+SSH_PORT="22"                          # Default SSH port (override via env var)
 
 # Colors for output
 RED='\033[0;31m'
@@ -19,15 +20,24 @@ NC='\033[0m'
 echo -e "${BLUE}🚀 Librarifran Deployment - Reclaim Hosting Compatible${NC}"
 echo -e "${YELLOW}📋 Configuration:${NC}"
 echo -e "   Host: $USERNAME@$HOST"
+echo -e "   SSH Port: $SSH_PORT"
 echo -e "   Destination: $REMOTE_PATH"
 echo -e "   Local: $LOCAL_PATH"
 echo ""
 
-# Build Jekyll site
+# Build Jekyll site (use bundle if available)
 echo -e "${YELLOW}🔨 Building Jekyll site...${NC}"
-bundle exec jekyll build
+if command -v bundle >/dev/null 2>&1; then
+    echo -e "${BLUE}Using: bundle exec jekyll build${NC}"
+    bundle exec jekyll build
+    build_status=$?
+else
+    echo -e "${BLUE}Using: jekyll build${NC}"
+    jekyll build
+    build_status=$?
+fi
 
-if [ $? -ne 0 ]; then
+if [ $build_status -ne 0 ]; then
     echo -e "${RED}❌ Jekyll build failed!${NC}"
     exit 1
 fi
@@ -35,8 +45,8 @@ fi
 echo -e "${GREEN}✅ Jekyll build complete${NC}"
 
 # Test basic connection
-echo -e "${YELLOW}🔌 Testing connection to $HOST...${NC}"
-ssh -o ConnectTimeout=10 "$USERNAME@$HOST" "pwd" 2>/dev/null
+echo -e "${YELLOW}🔌 Testing connection to $HOST on port $SSH_PORT...${NC}"
+ssh -o ConnectTimeout=10 -p "$SSH_PORT" "$USERNAME@$HOST" "pwd" 2>/dev/null
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✅ SSH connection successful${NC}"
 else
@@ -58,28 +68,35 @@ case $REPLY in
         echo -e "${YELLOW}💡 You'll be prompted for your cPanel password${NC}"
 
         # Use Reclaim's recommended rsync flags
-        rsync -avz \
+        # Ensure LOCAL_PATH ends with a slash so rsync copies contents, not the directory itself
+        LOCAL_PATH_NORM="${LOCAL_PATH%/}/"
+
+        rsync -avz -e "ssh -p $SSH_PORT" \
             --exclude='.DS_Store' \
             --exclude='Thumbs.db' \
             --exclude='.git*' \
             --progress \
-            "$LOCAL_PATH" "$USERNAME@$HOST:$REMOTE_PATH"
+            "$LOCAL_PATH_NORM" "$USERNAME@$HOST:$REMOTE_PATH"
         ;;
 
     2)
         echo -e "${YELLOW}🔍 Dry run - showing what would be transferred...${NC}"
-        rsync -avz --dry-run \
+        LOCAL_PATH_NORM="${LOCAL_PATH%/}/"
+
+        rsync -avz -e "ssh -p $SSH_PORT" --dry-run \
             --exclude='.DS_Store' \
             --exclude='Thumbs.db' \
             --exclude='.git*' \
-            "$LOCAL_PATH" "$USERNAME@$HOST:$REMOTE_PATH"
+            "$LOCAL_PATH_NORM" "$USERNAME@$HOST:$REMOTE_PATH"
         echo -e "${YELLOW}💡 This was just a preview. Run option 1 to actually deploy.${NC}"
         ;;
 
     3)
         echo -e "${YELLOW}📋 Step 1: Small files first...${NC}"
         # Upload small files first
-        rsync -avz \
+        LOCAL_PATH_NORM="${LOCAL_PATH%/}/"
+
+        rsync -avz -e "ssh -p $SSH_PORT" \
             --include='*.html' \
             --include='*.css' \
             --include='*.js' \
@@ -90,13 +107,13 @@ case $REPLY in
             --exclude='*' \
             --max-size=500K \
             --progress \
-            "$LOCAL_PATH" "$USERNAME@$HOST:$REMOTE_PATH"
+            "$LOCAL_PATH_NORM" "$USERNAME@$HOST:$REMOTE_PATH"
 
         if [ $? -eq 0 ]; then
             echo -e "${GREEN}✅ Small files uploaded${NC}"
             echo -e "${YELLOW}🖼️  Step 2: Images and medium files...${NC}"
 
-            rsync -avz \
+                rsync -avz -e "ssh -p $SSH_PORT" \
                 --include='*.jpg' \
                 --include='*.jpeg' \
                 --include='*.png' \
@@ -107,13 +124,13 @@ case $REPLY in
                 --exclude='*' \
                 --max-size=2M \
                 --progress \
-                "$LOCAL_PATH" "$USERNAME@$HOST:$REMOTE_PATH"
+                    "$LOCAL_PATH_NORM" "$USERNAME@$HOST:$REMOTE_PATH"
 
             if [ $? -eq 0 ]; then
                 echo -e "${GREEN}✅ Images uploaded${NC}"
                 echo -e "${YELLOW}🎵 Step 3: Large media files...${NC}"
 
-                rsync -avz \
+                rsync -avz -e "ssh -p $SSH_PORT" \
                     --include='*.mp3' \
                     --include='*.mp4' \
                     --include='*.pdf' \
@@ -121,7 +138,7 @@ case $REPLY in
                     --exclude='*' \
                     --progress \
                     --timeout=1800 \
-                    "$LOCAL_PATH" "$USERNAME@$HOST:$REMOTE_PATH"
+                    "$LOCAL_PATH_NORM" "$USERNAME@$HOST:$REMOTE_PATH"
             fi
         fi
         ;;
@@ -137,7 +154,7 @@ if [ $? -eq 0 ]; then
     echo -e "${YELLOW}🔧 Fixing file permissions...${NC}"
 
     # Fix permissions as recommended by Reclaim
-    ssh "$USERNAME@$HOST" "find '$REMOTE_PATH' -type d -exec chmod 755 {} \; && find '$REMOTE_PATH' -type f -exec chmod 644 {} \;"
+    ssh -p "$SSH_PORT" "$USERNAME@$HOST" "find '$REMOTE_PATH' -type d -exec chmod 755 {} \; && find '$REMOTE_PATH' -type f -exec chmod 644 {} \;"
 
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✅ Permissions fixed${NC}"

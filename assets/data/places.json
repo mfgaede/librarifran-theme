@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Tucson, AZ",
+    "type": "lived",
+    "lat": 32.2226,
+    "lng": -110.9747,
+    "year": 2006
+  },
+
+  {
+    "name": "Indianapolis, IN",
+    "type": "lived",
+    "lat": 39.768611,
+    "lng": -86.158056,
+    "year": 2013
+  },
+  {
+    "name": "Vancouver, BC",
+    "type": "visited",
+    "lat": 49.260833,
+    "lng": -123.113889,
+    "year": 2015
+  },
+  {
+    "name": "Chicago, IL",
+    "type": "visited",
+    "lat": 41.881944,
+    "lng": -87.627778
+  },
+  {
+    "name": "Baltimore, MD",
+    "type": "visited",
+    "lat": 39.289444,
+    "lng": -76.615278
+  },
+  {
+    "name": "Boston, MA",
+    "type": "visited",
+    "lat": 42.360278,
+    "lng": -71.05829
+  },
+  {
+    "name": "Anaheim, CA",
+    "type": "visited",
+    "lat": 33.836111,
+    "lng": -117.889722
+  },
+  {
+    "name": "Scottsdale, AZ",
+    "type": "lived",
+    "lat": 33.493056,
+    "lng": -111.926111
+  }
+]

@@ -177,12 +177,134 @@ figure.align-right::after { content: ""; display: table; clear: both; }
    in the generated HTML. Target those wrappers and common PDF iframes/embeds
    only inside post content so this change is scoped and safe. */
 .post__content [class^="pdf-embed-wrap-"],
-.post__content [class*=" pdf-embed-wrap-"],
+.post__content [class*=" pdf-embed-"],
 .post__content iframe[src$=".pdf"],
 .post__content embed[type="application/pdf"],
 .post__content .pdf-embed {
   margin: 0.6rem 0 !important;
   padding: 0 !important; /* don't introduce extra inner spacing */
   display: block !important;
+}
+
+/* Homepage favorites sidebar */
+.layout--home .archive {
+  /* Keep the float but remove right sidebar spacing */
+  @include breakpoint($large) {
+    float: right;
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-right: 0 !important;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width});
+    padding-right: 0 !important;
+  }
+}
+
+.home-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.home-main-content {
+  flex: 1;
+}
+
+.home-favorites-sidebar {
+  flex-shrink: 0;
+  background: lighten($background-color, 2%);
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 1.5rem;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: $type-size-5;
+    font-family: $sans-serif-narrow;
+    color: $text-color;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 0.5rem;
+
+    i {
+      margin-right: 0.5rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.favorites-section {
+  margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-item {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0;
+  border-bottom: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: inherit;
+    font-size: $type-size-5;
+    font-family: $sans-serif;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline !important;
+      text-decoration-color: $primary-color !important;
+      text-decoration-thickness: .08rem !important;
+    }
+
+    strong {
+      font-weight: normal;
+    }
+  }
+}
+
+.favorite-description {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  font-size: $type-size-6;
+  font-family: $sans-serif;
+  color: lighten($text-color, 15%);
+  line-height: 1.5;
+}
+
+/* Responsive layout: side-by-side on larger screens */
+@media screen and (min-width: 64em) {
+  .home-layout-wrapper {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  .home-main-content {
+    flex: 1;
+    min-width: 0; /* Prevent flex item from overflowing */
+  }
+
+  .home-favorites-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+  }
 }
 

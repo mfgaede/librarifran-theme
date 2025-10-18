@@ -36,4 +36,5 @@ assets/node_modules/
 *~
 
 # Ignore site PDFs or generated assets if you want (optional)
-assets/
+assets/img/
+assets/pdf/

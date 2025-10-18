@@ -1,0 +1,21 @@
+youtube_channels:
+  - name: "Josh Johnson"
+    url: "https://www.youtube.com/@JoshJohnsonComedy"
+    description: "We must laugh or we will just keep crying"
+  - name: "Kaz Rowe"
+    url: "https://www.youtube.com/@KazRowe"
+    description: "Queer culture and history, with jokes, costumes, and treasured earnestness"
+  - name: "matttt - comic & manga history"
+    url: "https://www.youtube.com/@mattwith4ts"
+    description: "I'm neither a comic book nor manga reader, but his videos make me wish for more bookshelves"
+
+podcasts:
+  - name: "If Books Could Kill"
+    url: "https://www.ifbookspod.com/"
+    description: "This & *[Maintenance Phase](https://www.maintenancephase.com/)* are the  podcasts that make me want to start a podcast"
+  - name: "Off-Book: The Improvised Musical"
+    url: "https://www.thezachandthejess.com/podcast-off-book.html"
+    description: "*HOW*"
+  - name: "Fall of Civilizations"
+    url: "https://fallofcivilizationspodcast.com/"
+    description: "The only problem with this podcast is the number of episodes. More please."

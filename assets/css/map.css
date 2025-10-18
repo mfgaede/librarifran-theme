@@ -1,0 +1,42 @@
+.#places-map { border: 1px solid #e0e0e0; border-radius: 6px; }
+.places-map-section { margin-top: 2.5rem; }
+.map-legend { margin-top: .5rem; font-size: 0.95rem; }
+.legend-lived, .legend-visited { display: inline-block; width: 14px; height: 14px; margin-right:6px; vertical-align:middle; border-radius:3px; }
+.legend-lived { background: #ff6105; }
+.legend-visited { background: #ffc905; }
+.legend-bucket { background: #0db7b3; }
+
+/* custom marker icon styles */
+.leaflet-div-icon.custom-marker { display: inline-block; }
+.custom-marker svg { filter: drop-shadow(0 1px 1px rgba(0,0,0,0.25)); }
+
+/* friendly error overlay inside the map */
+.map-error {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255,255,255,0.95);
+	color: #333;
+	padding: 1rem;
+	text-align: center;
+	z-index: 1000;
+	font-size: 0.95rem;
+	border-radius: 6px;
+}
+
+.map-error p { margin: 0 0 .5rem 0; }
+.map-error button { background: #ff6105; color: white; border: none; padding: .4rem .6rem; border-radius: 4px; cursor: pointer; }
+
+/* popup year styling */
+.map-popup { text-align: center; }
+.map-popup-year { color: #6c757d; font-size: 0.85rem; margin-top: 0.25rem; }
+
+/* Make popups use the site's global font stack */
+.map-popup, .leaflet-popup-content, .leaflet-popup-content-wrapper {
+	font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+}
