@@ -1,6 +1,6 @@
 ---
 title: "Arc Search"
-layout: single
+layout: app
 permalink: /apps/arc-search/ # Or a different permalink
 image_path: /assets/img/arc-search.png # Add image path if available
 developer_url: https://arc.net/search

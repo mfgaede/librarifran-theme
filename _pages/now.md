@@ -3,25 +3,28 @@ title: "Now"
 permalink: /now/
 layout: single
 ---
-## What's Happening in October 2024?  
+## What's Happening in October 2025?  
 
 ### Family
 
-My partner Kyle received a kidney transplant in February 2024 after several years on the transplant list because of a genetic kidney condition. I don't think there are words for the gift of life offered by the family of the anonymous donor, but I'm endlessly grateful.
+I'm gearing up for Halloween, inspired by a DIY costume I found on [Carbon Costume](https://carboncostume.com/snoopy-the-flying-ace/). It was mostly an excuse to add a bomber jacket to my wardrobe and I've accessorized with vintage Snoopy earrings to make it abundantly clear Who I'm Supposed to Be.
 
-Likewise, there are no words for to describe the loss of Kyle's beloved mother, who passed away from complications of the same genetic disease in May. [I wrote about her in July](https://www.kudoboard.com/boards/xGRD0ThE) and I miss her every day.
+{% include figure image_path="/assets/img/snoopy.png" %}
+<figcaption><a href="https://www.etsy.com/listing/113937776/aviva-vintage-snoopy-peanuts-flying-ace">c. 1958 - 1970s Flying Ace Snoopy Earrings from ronahorn</a></figcaption>
 
 ### Home
 
-My garden is in a sorry state right now; I hope to spend a little time in it this fall to get ready for the winter planting season. I've been spending lots of time indoors with my cross stitch; I'm hoping my hyperfixation will allow me more than one hobby at a given time.
+I attended the Pacific Northwest Stitch Summit in September 2025 (Table 21!) and had an amazing time. Finally finished FlossyFoxShop's Night of the Frost Dragon after more than a year and am delighted to send it to its home.
+
+{% include figure image_path="/assets/img/frost-dragon.png" alt="Night of the Frost Dragon cross stitch" caption='<a href="https://www.etsy.com/listing/1760858045/night-of-the-frost-dragon-stitch-along">Night of the Frost Dragon Stitch-a-Long by FlossyFoxShop on Etsy</a>' %}
 
 ### Work
 
-This summer, I asked to take a step back from my management responsibilities and to join the faculty of the University of Oregon Libraries. My request was graciously granted and I have been building a new role for myself as a Strategic Projects Librarian. I'm serving as the interim subject liaison for the School of Planning, Public Planning, and Management and preparing to teach a credit bearing course for the Digital Humanities minor / Data Science major on the Cultural Analytics track during the Winter 2025 term.
+I'm incredibly grateful for the opportunity to teach and to work with students in credit-bearing courses and extracurricularly. Teaching has been a bright spot during a very difficult year at the University and the Libraries.
 
 ### Culture
 
-I just finished watching *X-Men'97* and thought it was spectacular. I may or may not be modeling my hair after Storm's, whether physics allows it or no. Also on Disney+ is the atmospheric and delightful *Agatha All Along*. Katherine Hahn can read the phone book and it's entertaining and Joe Locke is so charming I cannot believe it's only his second role.
+In honor of spooky season, I'm listening to Jaime Loftus' [Ghost Church](https://podcasts.apple.com/us/podcast/ghost-church-by-jamie-loftus/id1619557591), a history and mystery of American spiritualism. I'm several episodes in to *House of Guinness*. Its anachronistic soundtrack keeps me from taking it too seriously, but it's terribly entertaining. Really looking forward to Guillermo del Toro's *Frankenstein*! I never get tired of adaptations of my favorite story. 😍
 
 ## What is this page?
 

@@ -6,7 +6,6 @@
     "lng": -110.9747,
     "year": 2006
   },
-
   {
     "name": "Indianapolis, IN",
     "type": "lived",
@@ -46,9 +45,31 @@
     "lng": -117.889722
   },
   {
+    "name": "Seattle, WA",
+    "type": "visited",
+    "lat": 47.603889,
+    "lng": -122.33,
+    "year": 2013
+  },
+  {
+    "name": "Eugene, OR",
+    "type": "lived",
+    "lat": 44.056389,
+    "lng": -123.1175,
+    "year": 2017
+  },
+  {
+    "name": "Mitchell, SD",
+    "type": "lived",
+    "lat": 43.729444,
+    "lng": -98.033611,
+    "year": 1987
+  },
+  {
     "name": "Scottsdale, AZ",
     "type": "lived",
     "lat": 33.493056,
-    "lng": -111.926111
+    "lng": -111.926111,
+    "year": 1993
   }
 ]

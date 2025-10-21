@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% assign breadcrumbs_enabled = site.breadcrumbs %}
+{% if page.breadcrumbs != null %}
+  {% assign breadcrumbs_enabled = page.breadcrumbs %}
+{% endif %}
+{% if page.url != "/" and breadcrumbs_enabled %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page app-page" itemscope itemtype="https://schema.org/SoftwareApplication">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      <header>
+        <div class="app-header">
+          {% if page.image_path %}
+            <div class="app-header__image">
+              <img src="{{ page.image_path | relative_url }}" alt="{{ page.title }}" itemprop="image">
+            </div>
+          {% endif %}
+
+          <div class="app-header__content">
+            {% if page.title %}
+              <h1 class="page__title" itemprop="name">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+            {% endif %}
+
+            <div class="app-metadata">
+              {% if page.category %}
+                <div class="app-metadata__item">
+                  <span class="app-metadata__label">Category:</span>
+                  <span class="app-metadata__value">{{ page.category }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.usages %}
+                <div class="app-metadata__item">
+                  <span class="app-metadata__label">Usage:</span>
+                  <span class="app-metadata__value">{{ page.usages | join: ", " }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.former %}
+                <div class="app-metadata__item">
+                  <span class="app-metadata__badge app-metadata__badge--former">Former Default</span>
+                </div>
+              {% else %}
+                <div class="app-metadata__item">
+                  <span class="app-metadata__badge app-metadata__badge--current">Current Default</span>
+                </div>
+              {% endif %}
+            </div>
+
+            {% if page.app_store_url or page.developer_url %}
+              <div class="app-links">
+                {% if page.app_store_url %}
+                  <a href="{{ page.app_store_url }}" class="btn btn--primary" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-app-store-ios"></i> App Store
+                  </a>
+                {% endif %}
+
+                {% if page.developer_url %}
+                  <a href="{{ page.developer_url }}" class="btn btn--primary" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Developer Site
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </header>
+
+      <section class="page__content" itemprop="description">
+        {% if content and content != "" %}
+          {% assign content_stripped = content | strip_html | strip | strip_newlines %}
+          {% if content_stripped != "" %}
+            <h2>Notes</h2>
+            {{ content }}
+          {% endif %}
+        {% endif %}
+      </section>
+
+      <footer class="page__meta">
+        <p class="page__back-link">
+          <a href="{{ '/defaults/' | relative_url }}">← Back to Defaults</a>
+        </p>
+      </footer>
+    </div>
+  </article>
+</div>

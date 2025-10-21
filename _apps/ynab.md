@@ -1,6 +1,6 @@
 ---
 title: "YNAB"
-layout: single
+layout: app
 permalink: /apps/ynab/ # Or a different permalink
 image_path: /assets/img/ynab.png # Add image path if available
 developer_url: https://www.ynab.com/
@@ -10,4 +10,4 @@ former: true
 usages:
   - Personal
 ---
-My partner hates apps. If it isn’t available in a browser, it might as well not exist. If we’re going to have a shared system, it needs a web version.
+My partner hates apps. If it isn’t available in a browser, it might as well not exist. If we’re going to have a shared system, it needs a web version. Apparently they've introduced a web version now, but too little, too late!

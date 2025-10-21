@@ -35,6 +35,8 @@
   flex-direction: column; /* Arrange items in a column */
   align-items: center; /* Center items horizontally */
   width: 8rem;
+  min-height: 10.5rem; /* Set minimum height for uniformity */
+  justify-content: space-between; /* Space out content evenly */
 }
 
 .app__category-header {
@@ -64,6 +66,10 @@
   margin-top: 0.15em; /* Reduced top margin */
   margin-bottom: 0.06em; /* Reduced bottom spacing */
   color: lighten($text-color, 20%); /* Lighter color */
+}
+
+.app__buttons {
+  margin-top: auto; /* Push buttons to bottom of card */
 }
 
 .btn {
@@ -103,6 +109,133 @@
 
 .archive__item-body {
   text-align: center; /* Center the content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.app__note-indicator {
+  display: inline-block;
+  margin-left: 0.3em;
+  font-size: 0.75em;
+  color: $primary-color;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  i {
+    vertical-align: middle;
+  }
+}
+
+/* App page layout */
+.app-page {
+  .app-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid $border-color;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .app-header__image {
+    flex-shrink: 0;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+  }
+
+  .app-header__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .app-metadata {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .app-metadata__item {
+    margin-bottom: 0.5rem;
+    font-size: 0.95em;
+  }
+
+  .app-metadata__label {
+    font-weight: 600;
+    color: $text-color;
+    margin-right: 0.5rem;
+  }
+
+  .app-metadata__value {
+    color: lighten($text-color, 15%);
+  }
+
+  .app-metadata__badge {
+    display: inline-block;
+    padding: 0.3em 0.8em;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .app-metadata__badge--current {
+    background-color: lighten($primary-color, 40%);
+    color: darken($primary-color, 10%);
+  }
+
+  .app-metadata__badge--former {
+    background-color: lighten($dark-gray, 40%);
+    color: $dark-gray;
+  }
+
+  .app-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    .btn {
+      margin: 0;
+    }
+  }
+
+  .page__back-link {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $border-color;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: darken($primary-color, 10%);
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 /* Video channel link styling: orange and underline on hover */
@@ -290,6 +423,160 @@ figure.align-right::after { content: ""; display: table; clear: both; }
   line-height: 1.5;
 }
 
+/* Carousel styles for favorites */
+.favorites-carousel {
+  position: relative;
+}
+
+.carousel-items {
+  position: relative;
+  min-height: 100px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .carousel-link {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: inherit;
+    font-size: $type-size-5;
+    font-family: $sans-serif;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline !important;
+      text-decoration-color: $primary-color !important;
+      text-decoration-thickness: .08rem !important;
+    }
+
+    strong {
+      font-weight: normal;
+    }
+  }
+}
+
+.carousel-media {
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.podcast-artwork {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid $border-color;
+}
+
+.carousel-nav {
+  background: transparent;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  color: $text-color;
+  transition: all 0.2s ease;
+  font-size: $type-size-6;
+  position: relative;
+
+  &:hover:not(:disabled) {
+    background: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  i {
+    display: block;
+  }
+
+  // Visual indicator for looping buttons
+  &.loops-around {
+    border-style: dashed;
+    border-color: lighten($primary-color, 20%);
+
+    &:hover {
+      border-style: solid;
+      background: lighten($primary-color, 5%);
+      border-color: lighten($primary-color, 5%);
+    }
+
+    // Add a subtle circular arrow icon overlay
+    &::after {
+      content: '\21BA'; // Unicode circular arrow
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: $primary-color;
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      opacity: 0.9;
+    }
+  }
+}
+
+.carousel-counter {
+  font-size: $type-size-6;
+  color: lighten($text-color, 15%);
+  font-family: $sans-serif;
+  min-width: 3rem;
+  text-align: center;
+
+  .current-index {
+    font-weight: 600;
+    color: $text-color;
+  }
+}
+
 /* Responsive layout: side-by-side on larger screens */
 @media screen and (min-width: 64em) {
   .home-layout-wrapper {
@@ -305,6 +592,33 @@ figure.align-right::after { content: ""; display: table; clear: both; }
   .home-favorites-sidebar {
     width: 300px;
     flex-shrink: 0;
+  }
+}
+
+/* Recent Posts and Places Map sections */
+.recent-posts-section {
+  clear: both;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.places-map-section {
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-top: 2px solid $border-color;
+  clear: both;
+
+  h3 {
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
 }
 

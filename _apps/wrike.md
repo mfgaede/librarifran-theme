@@ -1,6 +1,6 @@
 ---
 title: "Wrike"
-layout: single
+layout: app
 permalink: /apps/wrike/ # Or a different permalink
 image_path: /assets/img/wrike.png # Add image path if available
 developer_url: https://www.wrike.com/

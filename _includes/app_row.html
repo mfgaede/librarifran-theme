@@ -1,4 +1,6 @@
-{% if include.id %}
+{% if include.apps %}
+  {% assign app_row = include.apps %}
+{% elsif include.id %}
   {% assign app_row = page[include.id] %}
 {% else %}
   {% assign app_row = page.app_row %}
@@ -59,13 +61,27 @@
 
         {% if app.image_path %}
           <div class="archive__item-teaser">
-            <img src="{{ app.image_path | relative_url }}" alt="{{ app.name }}">
+            {% if app.url %}
+              <a href="{{ app.url | relative_url }}">
+                <img src="{{ app.image_path | relative_url }}" alt="{{ app.title | default: app.name }}">
+              </a>
+            {% else %}
+              <img src="{{ app.image_path | relative_url }}" alt="{{ app.title | default: app.name }}">
+            {% endif %}
           </div>
         {% endif %}
 
         <div class="archive__item-body">
-          {% if app.name %}
-            <h2 class="archive__item-title">{{ app.name }}</h2>
+          {% if app.title or app.name %}
+            <h2 class="archive__item-title">
+              {{ app.title | default: app.name }}
+              {% assign content_stripped = app.content | strip_html | strip | strip_newlines %}
+              {% if content_stripped != "" %}
+                <a href="{{ app.url | relative_url }}" class="app__note-indicator" title="View notes">
+                  <i class="fas fa-sticky-note"></i>
+                </a>
+              {% endif %}
+            </h2>
           {% endif %}
 
           {% if app.app_store_url or app.developer_url %}

@@ -1,6 +1,6 @@
 ---
 title: "Excel for Mac"
-layout: single
+layout: app
 permalink: /apps/excel/ # Or a different permalink
 image_path: /assets/img/excel.png/ # Add image path if available
 app_store_url: https://apps.apple.com/us/app/microsoft-excel/id462058435?mt=12

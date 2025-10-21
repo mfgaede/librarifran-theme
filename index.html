@@ -10,52 +10,101 @@ pagination:
   <div class="home-main-content">
     <p>I play yellow in board games and adore echinacea flowers in my garden. I spend a lot (<strong>a lot</strong>) of time cross-stitching, although all my finished pieces are rolled up in a cabinet. My wardrobe straddles the line between corporate-goth and lobster-print-pants and my go-to host gift is Dr. Pepper. I have a strong aversion to being late... which is ironic, since I usually am. My Wordle start word is "CRANE."</p>
     <p>According to CliftonStrengths, I lead with Influencing: Positivity, Input, Woo, Activator, and Maximizer. I adore connecting with others and learning from them, almost as much as I love the nap I have to take after a long day of socializing. I have rebuilt this website in four static site builders but it's [still in / returned to] Jekyll. This is either a compliment to Jekyll or a testament to my interest in tinkering with things that are already working.</p>
-    <h3>Recent Posts</h3>
-    <div class="grid__wrapper">
-      {% for post in site.posts limit:3 %}
-        {% include archive-single.html type="grid" %}
-      {% endfor %}
-    </div>
-    
-    <!-- Map of places lived and visited (moved here so it appears under Recent Posts) -->
-    <section id="places-map-section" class="places-map-section">
+    <section class="recent-posts-section">
+      <h3>Recent Posts</h3>
+      <div class="grid__wrapper">
+        {% for post in site.posts limit:3 %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="places-map-section">
       <h3>Places I've Lived & Visited</h3>
-  <div id="places-map" style="height:420px; width:100%;" data-places-url="{{ '/assets/data/places.json' | relative_url }}"></div>
-      <p class="map-legend"><span class="legend-lived"></span> Lived &nbsp; <span class="legend-visited"></span> Visited</p>
+      <div id="places-map" style="height:420px; width:100%;" data-places-url="{{ '/assets/data/places.json' | relative_url }}"></div>
+      <p class="map-legend">
+        <i class="fa-solid fa-house" style="color: #ff6105;"></i> Lived &nbsp;&nbsp;
+        <i class="fa-solid fa-plane" style="color: #ffc905;"></i> Visited
+      </p>
     </section>
   </div>
 
   <aside class="home-favorites-sidebar">
     <div class="favorites-section">
       <h3><i class="fa-brands fa-youtube"></i> YouTube Channel Guide</h3>
-      <ul class="favorites-list">
-        {% for channel in site.data.favorites.youtube_channels %}
-          <li class="favorite-item">
-            <a href="{{ channel.url }}" target="_blank" rel="noopener noreferrer">
-              <strong>{{ channel.name }}</strong>
-            </a>
-            {% if channel.description %}
-              <div class="favorite-description">{{ channel.description | markdownify }}</div>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="favorites-carousel" data-carousel="youtube">
+        <div class="carousel-items">
+          {% for channel in site.data.favorites.youtube_channels %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              {% if channel.video_id %}
+                <div class="carousel-media">
+                  <div class="youtube-embed">
+                    <iframe
+                      {% if forloop.first %}src="https://www.youtube-nocookie.com/embed/{{ channel.video_id }}"{% else %}data-src="https://www.youtube-nocookie.com/embed/{{ channel.video_id }}"{% endif %}
+                      title="{{ channel.name }} video"
+                      frameborder="0"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      loading="lazy">
+                    </iframe>
+                  </div>
+                </div>
+              {% endif %}
+              <a href="{{ channel.url }}" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                <strong>{{ channel.name }}</strong>
+              </a>
+              {% if channel.description %}
+                <div class="favorite-description">{{ channel.description | markdownify }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav carousel-prev" aria-label="Previous channel">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <span class="carousel-counter">
+            <span class="current-index">1</span> / {{ site.data.favorites.youtube_channels.size }}
+          </span>
+          <button class="carousel-nav carousel-next" aria-label="Next channel">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="favorites-section">
       <h3><i class="fa-solid fa-podcast"></i> Current Podcasts</h3>
-      <ul class="favorites-list">
-        {% for podcast in site.data.favorites.podcasts %}
-          <li class="favorite-item">
-            <a href="{{ podcast.url }}" target="_blank" rel="noopener noreferrer">
-              <strong>{{ podcast.name }}</strong>
-            </a>
-            {% if podcast.description %}
-              <div class="favorite-description">{{ podcast.description | markdownify }}</div>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="favorites-carousel" data-carousel="podcasts">
+        <div class="carousel-items">
+          {% for podcast in site.data.favorites.podcasts %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+              {% if podcast.artwork %}
+                <div class="carousel-media">
+                  <img src="{{ podcast.artwork }}" alt="{{ podcast.name }} artwork" class="podcast-artwork">
+                </div>
+              {% endif %}
+              <a href="{{ podcast.url }}" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                <strong>{{ podcast.name }}</strong>
+              </a>
+              {% if podcast.description %}
+                <div class="favorite-description">{{ podcast.description | markdownify }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-nav carousel-prev" aria-label="Previous podcast">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <span class="carousel-counter">
+            <span class="current-index">1</span> / {{ site.data.favorites.podcasts.size }}
+          </span>
+          <button class="carousel-nav carousel-next" aria-label="Next podcast">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </aside>
 </div>
@@ -65,3 +114,4 @@ pagination:
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <link rel="stylesheet" href="/assets/css/map.css" />
 <script src="/assets/js/map.js" defer></script>
+<script src="/assets/js/carousel.js" defer></script>

@@ -1,6 +1,6 @@
 ---
 title: "Platejoy"
-layout: single
+layout: app
 permalink: /apps/platejoy/ # Or a different permalink
 image_path: /assets/img/platejoy.png # Add image path if available
 developer_url: https://www.platejoy.com/ # Add developer URL if available

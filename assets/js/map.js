@@ -28,11 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
     bucket: '#0db7b3' // teal to coordinate with orange/mustard
   };
 
-  // Create a DivIcon that renders an inline SVG circle so the icon scales crisply
-  function createSvgIcon(color) {
-    const size = 20;
-    const svg = `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"><circle cx="${size/2}" cy="${size/2}" r="7" fill="${color}" stroke="#fff" stroke-width="2"/></svg>`;
-    const html = `<div class="custom-marker">${svg}</div>`;
+  // Create a DivIcon with Font Awesome icons (house for lived, plane for visited, shamrock for bucket list)
+  function createSvgIcon(color, type) {
+    const size = 16;
+    let iconClass = 'fa-solid fa-circle'; // default fallback
+
+    if (type === 'lived') {
+      iconClass = 'fa-solid fa-house';
+    } else if (type === 'visited') {
+      iconClass = 'fa-solid fa-plane';
+    } else if (type === 'bucket') {
+      iconClass = 'fa-solid fa-clover';
+    }
+
+    const html = `<i class="${iconClass}" style="color: ${color}; font-size: ${size}px;"></i>`;
     return L.divIcon({ className: 'custom-marker-icon', html, iconSize: [size, size], iconAnchor: [size/2, size/2] });
   }
 
@@ -62,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
         // Start more zoomed-in over the continental United States
         const map = L.map('places-map', { scrollWheelZoom: false }).setView([39.8283, -98.5795], 4);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '&copy; OpenStreetMap contributors'
+        L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+          maxZoom: 20,
+          attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
         // Load data and add markers
@@ -75,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
           const group = L.featureGroup();
           data.forEach(place => {
             const color = colors[place.type] || '#777';
-            const icon = createSvgIcon(color);
+            const icon = createSvgIcon(color, place.type);
             const marker = L.marker([place.lat, place.lng], { icon });
             // Popup: name and optional year (centered, medium grey)
             const yearHtml = place.year ? `<div class="map-popup-year">${place.year}</div>` : '';

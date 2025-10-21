@@ -1,6 +1,6 @@
 ---
 title: "Orion"
-layout: single
+layout: app
 permalink: /apps/orion/ # Or a different permalink
 image_path: /assets/img/orion.png # Add image path if available
 developer_url: https://kagi.com/orion/

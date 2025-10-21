@@ -1,10 +1,11 @@
 ---
 title: "Microsoft Teams"
 permalink: /apps/teams/
-layout: single
+layout: app
 image_path: /assets/img/teams.png
 app_store_url: https://apps.apple.com/us/app/microsoft-teams/id1113153706
 category: Chat
+former: false
 usages:
   - Work
 ---

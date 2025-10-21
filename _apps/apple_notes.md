@@ -1,6 +1,6 @@
 ---
 title: " Notes"
-layout: single
+layout: app
 permalink: /apps/apple_notes/ # Or a different permalink
 image_path: /assets/img/notes.png/ # Add image path if available
 app_store_url: https://apps.apple.com/us/app/notes/id1110145109

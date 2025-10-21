@@ -203,6 +203,12 @@ jekyll-archives:
     tag: '/tags/:name/'
     category: '/categories/:name/'
 
+# Collections
+collections:
+  apps:
+    output: true
+    permalink: /apps/:name/
+
 # Default Settings
 defaults:
   - scope:
@@ -217,6 +223,13 @@ defaults:
       type: "pages"
     values:
       layout: single
+      author_profile: true
+      comments: false
+  - scope:
+      path: ""
+      type: "apps"
+    values:
+      layout: app
       author_profile: true
       comments: false
 

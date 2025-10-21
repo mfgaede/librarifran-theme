@@ -1,11 +1,12 @@
 ---
 title: "Spark"
 permalink: /apps/spark/
-layout: single
+layout: app
 image_path: /assets/img/spark.png
 app_store_url: https://apps.apple.com/us/app/spark-mail-ai-email-inbox/id6445813049?mt=12
 developer_url: https://sparkmailapp.com
 category: Email
+former: true
 usages:
   - Personal
   - Work
