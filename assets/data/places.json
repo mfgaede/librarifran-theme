@@ -71,5 +71,71 @@
     "lat": 33.493056,
     "lng": -111.926111,
     "year": 1993
+  },
+  {
+    "name": "Austin, TX",
+    "type": "lived",
+    "lat": 30.266666,
+    "lng": -97.733330
+  },
+  {
+    "name": "San Francisco, CA",
+    "type": "visited",
+    "lat": 37.733795,
+    "lng": -122.446747
+  },
+  {
+    "name": "Redding, CA",
+    "type": "visited",
+    "lat": 40.586540,
+    "lng": -122.391678
+  },
+  {
+    "name": "Palm Springs, CA",
+    "type": "visited",
+    "lat": 33.830517,
+    "lng": -116.545601
+  },
+  {
+    "name": "St. Louis, MO",
+    "type": "visited",
+    "lat": 38.631966,
+    "lng": -90.242876
+  },
+  {
+    "name": "Boston, MA",
+    "type": "visited",
+    "lat": 42.355433,
+    "lng": -71.060511
+  },
+  {
+    "name": "Baltimore, MD",
+    "type": "visited",
+    "lat": 39.290882,
+    "lng": -76.610759
+  },
+  {
+    "name": "Chapel Hill, NC",
+    "type": "visited",
+    "lat": 35.912586,
+    "lng": -79.004618
+  },
+  {
+    "name": "Tallahassee, FL",
+    "type": "visited",
+    "lat": 30.438083,
+    "lng": -84.280933
+  },
+  {
+    "name": "Santa Fe, NM",
+    "type": "visited",
+    "lat": 35.687610,
+    "lng": -105.938456
+  },
+  {
+    "name": "Big Sky, MT",
+    "type": "visited",
+    "lat": 45.258964,
+    "lng": -111.308725
   }
 ]
