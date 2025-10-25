@@ -38,3 +38,6 @@ assets/node_modules/
 # Ignore site PDFs or generated assets if you want (optional)
 assets/img/
 assets/pdf/
+
+# Bucket list data (removed feature)
+assets/data/bucket.json
