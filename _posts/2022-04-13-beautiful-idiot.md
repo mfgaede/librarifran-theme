@@ -2,7 +2,7 @@
 title: "Beautiful Idiot"
 date: 2022-04-13 08:33:00 +0000
 categories: [photos]
-tags: cute, memes
+tags: [cute, memes]
 layout: gallery
 location: Eugene, OR
 gallery:

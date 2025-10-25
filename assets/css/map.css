@@ -1,9 +1,50 @@
 .#places-map { border: 1px solid #e0e0e0; border-radius: 6px; }
-.map-legend { margin-top: .5rem; font-size: 0.95rem; }
-.legend-lived, .legend-visited { display: inline-block; width: 14px; height: 14px; margin-right:6px; vertical-align:middle; border-radius:3px; }
-.legend-lived { background: #ff6105; }
-.legend-visited { background: #ffc905; }
-.legend-bucket { background: #0db7b3; }
+
+/* Interactive legend control */
+.map-legend {
+  background: white;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  margin: 2px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.legend-item:hover {
+  background-color: #f5f5f5;
+}
+
+.legend-item.active {
+  opacity: 1;
+}
+
+.legend-item:not(.active) {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.legend-item i {
+  font-size: 14px;
+  width: 14px;
+  text-align: center;
+}
+
+.legend-item span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
 
 /* custom marker icon styles */
 .leaflet-div-icon.custom-marker-icon {
@@ -75,4 +116,43 @@
 .leaflet-control-attribution {
 	font-size: 0.6rem !important;
 	opacity: 0.7;
+}
+
+/* Custom cluster marker styles */
+.marker-cluster div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 3px solid white;
+}
+
+.marker-cluster div span {
+  line-height: 1;
+}
+
+/* Override default cluster styles */
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+  background-clip: padding-box;
+}
+
+/* Type-specific cluster styles (colors are set inline via iconCreateFunction) */
+.marker-cluster-lived div {
+  opacity: 0.9;
+}
+
+.marker-cluster-visited div {
+  opacity: 0.9;
+}
+
+.marker-cluster-bucket div {
+  opacity: 0.9;
 }

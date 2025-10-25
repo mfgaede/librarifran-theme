@@ -3,22 +3,19 @@
     "name": "Tucson, AZ",
     "type": "lived",
     "lat": 32.2226,
-    "lng": -110.9747,
-    "year": 2006
+    "lng": -110.9747
   },
   {
     "name": "Indianapolis, IN",
     "type": "lived",
     "lat": 39.768611,
-    "lng": -86.158056,
-    "year": 2013
+    "lng": -86.158056
   },
   {
     "name": "Vancouver, BC",
     "type": "visited",
     "lat": 49.260833,
-    "lng": -123.113889,
-    "year": 2015
+    "lng": -123.113889
   },
   {
     "name": "Chicago, IL",
@@ -48,29 +45,25 @@
     "name": "Seattle, WA",
     "type": "visited",
     "lat": 47.603889,
-    "lng": -122.33,
-    "year": 2013
+    "lng": -122.33
   },
   {
     "name": "Eugene, OR",
     "type": "lived",
     "lat": 44.056389,
-    "lng": -123.1175,
-    "year": 2017
+    "lng": -123.1175
   },
   {
     "name": "Mitchell, SD",
     "type": "lived",
     "lat": 43.729444,
-    "lng": -98.033611,
-    "year": 1987
+    "lng": -98.033611
   },
   {
     "name": "Scottsdale, AZ",
     "type": "lived",
     "lat": 33.493056,
-    "lng": -111.926111,
-    "year": 1993
+    "lng": -111.926111
   },
   {
     "name": "Austin, TX",
@@ -103,18 +96,6 @@
     "lng": -90.242876
   },
   {
-    "name": "Boston, MA",
-    "type": "visited",
-    "lat": 42.355433,
-    "lng": -71.060511
-  },
-  {
-    "name": "Baltimore, MD",
-    "type": "visited",
-    "lat": 39.290882,
-    "lng": -76.610759
-  },
-  {
     "name": "Chapel Hill, NC",
     "type": "visited",
     "lat": 35.912586,
@@ -137,5 +118,71 @@
     "type": "visited",
     "lat": 45.258964,
     "lng": -111.308725
+  },
+  {
+    "name": "Bozeman, MT",
+    "type": "visited",
+    "lat": 45.676998,
+    "lng": -111.042933
+  },
+  {
+    "name": "Las Vegas, NV",
+    "type": "visited",
+    "lat": 36.1674263,
+    "lng": -115.1484131
+  },
+  {
+    "name": "San Antonio, TX",
+    "type": "visited",
+    "lat": 29.4246002,
+    "lng": -98.4951405
+  },
+  {
+    "name": "Minneapolis, MN",
+    "type": "visited",
+    "lat": 44.9772995,
+    "lng": -93.2654692
+  },
+  {
+    "name": "Crosby, ND",
+    "type": "visited",
+    "lat": 48.9142,
+    "lng": -103.29491
+  },
+  {
+    "name": "Boise, ID",
+    "type": "visited",
+    "lat": 43.6166163,
+    "lng": -116.200886
+  },
+  {
+    "name": "Carlsbad, NM",
+    "type": "visited",
+    "lat": 32.4257456,
+    "lng": -104.237612
+  },
+  {
+    "name": "Dallas, TX",
+    "type": "visited",
+    "lat": 32.7762719,
+    "lng": -96.7968559
+  },
+  {
+    "name": "Detroit, MI",
+    "type": "visited",
+    "lat": 42.3315509,
+    "lng": -83.0466403
+  },
+  {
+    "name": "Nashville, TN",
+    "type": "lived",
+    "lat": 36.1961664,
+    "lng": -86.6224959
+  },
+  {
+    "name": "Maumee, OH",
+    "type": "visited",
+    "lat": 41.5628294,
+    "lng": -83.6538244
   }
 ]
